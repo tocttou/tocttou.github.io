@@ -1,0 +1,39 @@
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+
+# Site settings
+title: "Ashish Chaudhary"
+description: > # this means to ignore newlines until "email:"
+    
+
+email: iamashishchaudhary@gmail.com
+#blog logo
+logo: "/assets/images/ac_logo.jpg"
+# blog cover
+cover: "/assets/images/jump.jpg"
+
+name: 'Ashish Chaudhary'
+author: 'Ashish Chaudhary'
+author_image: "/assets/images/author.jpg"
+
+paginate:	5
+
+url: "https://about.me/chaudharyashish" # the base hostname & protocol for your site
+baseurl: ""
+
+# social icons and sharing options
+social:
+  - icon:	facebook
+    url:	https://facebook.com/ashishchaudhary2311
+    desc: Connect with me on Facebook
+    share_url:
+    share_title:
+    share_link:
+
+  - icon:	github
+    url:	https://github.com/yankee101
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
