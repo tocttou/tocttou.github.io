@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "Prototype"
+date:   2015-03-07 01:37:25
+categories: jekyll update
+tags: regular
+
+---
+###What it does
+
+This one checks how new blogs are displayed if we do not use the featured tag in any of the posts.
+Cool!
+
+###So Does It Work Fine?
+I would say, Yes!!
+
+But what if I want to write a new line?
+Well yeah, thats also supported. Just checked now!
+
+---
+
+![Sample Image]({{ site.baseurl }}/assets/images/jump.jpg)
+
+The above image is a sample image. This blog post is only for testing. It is not intended to be posted on the main site.
+
+##Lets see how Jekyll seves this one!
+
+#Types of chutiya :
+
+1. Atul
+2. Firse Atul
+
+> Disclaimer : Atul is a chutiya.
