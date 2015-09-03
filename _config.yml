@@ -1,39 +1,36 @@
-# Build settings
-markdown: redcarpet
-highlighter: pygments
-
 # Site settings
-title: "Ashish Chaudhary"
-description: > # this means to ignore newlines until "email:"
-    
+title: Ashish Chaudhary
+description: "Ashish Chaudhary's blog"
+url: "http://ashishchaudhary.in"
+author:
+  name: "Ashish Chaudhary"
+  email: "me@ashishchaudhary.in"
+  url: "http://ashishchaudhary.in"
 
-email: iamashishchaudhary@gmail.com
-#blog logo
-logo: "/assets/images/ac_logo.jpg"
-# blog cover
-cover: "/assets/images/jump.jpg"
+# Build settings
+baseurl: /
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 4
+paginate_path: /page:num/
 
-name: 'Ashish Chaudhary'
-author: 'Ashish Chaudhary'
-author_image: "/assets/images/author.jpg"
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
-paginate:	5
+# Custom variables
+copyright : ""
+owner : "Ashish Chaudhary"
+year : "© 2015 "
 
-url: "http://ashishchaudhary.in" # the base hostname & protocol for your site
-baseurl: ""
-
-# social icons and sharing options
-social:
-  - icon:	facebook
-    url:	https://facebook.com/ashishchaudhary2311
-    desc: Connect with me on Facebook
-    share_url:
-    share_title:
-    share_link:
-
-  - icon:	github
-    url:	https://github.com/yankee101
-    desc:	Fork on github
-    share_url:
-    share_title:
-    share_link:
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
