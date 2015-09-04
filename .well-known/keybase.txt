@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/ashishchaudhary
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://ashishchaudhary.in
+  * I am ashishchaudhary (https://keybase.io/ashishchaudhary) on keybase.
+  * I have a public key with fingerprint 1157 D03C D9C1 F7A8 E7C4  78C3 A175 E58F B0B0 5CDF
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "1157d03cd9c1f7a8e7c478c3a175e58fb0b05cdf",
+            "host": "keybase.io",
+            "key_id": "a175e58fb0b05cdf",
+            "kid": "01019ce461e3c98c168d5b514adb3d635800192321a08f0ca733250bbff436cf05110a",
+            "uid": "c9bb805e8ad0b47f39bfd723be0e9019",
+            "username": "ashishchaudhary"
+        },
+        "service": {
+            "hostname": "ashishchaudhary.in",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1441370214,
+    "expire_in": 157680000,
+    "prev": "736b7500d1fb7ce2ee57b2ae90cedf60a4490a5b8090e5548275a42be08a9b1f",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.43
+Comment: https://keybase.io/crypto
+
+yMIdAnicbZJrSBRRFMfXXVNazBLLIAhqokxa5N6ZuTsza/SOMi0JqYWy5N47d9zR
+nFl3x02xogLJnvjFKJASF8yK+tJDBSGz6GHRhxTCJOhBsX0KrehBWXekvvnpcs/5
+n985/8O5P8vn8add9Zcfqn00nkx7cndrvWfHx1ajSSC23iiEmoQaNvUYplXFYtGY
+aTlCSIAQKTqQqK5RaChYZQqVFZVKGCqIIdUggABEdUMICBE77lZwDMFxVmjaPMY/
+labOo9Poa6YSAAKoUSYHIZOoplIYVHVEEJSxTiQ9KCEVcIEoiRAD1QAUK5IkIkCI
+YchSkBoAQQgwx9VP4ahGiAoQU7EOiKwYkkYMXRElwgDTOMgVxlnMwrXMnSoeMeMR
+GsH1egTHGoWDAYEnEyZl7iZcQ9MLC02Lg6Ix27GpvY/nI44TDbnlTmPU1e9npPIf
+qZKYls53ygsSLBY3bUsIQa6kjumioSxDSQEilAMCa4iaMVZpugqkBLlzANw2LMGR
+ihQkCgJAhwZRKBMZQwoRMXdFmW4EAZZlDWDE3WuAISSrooKwLHLjKtYIdDceZ3WW
+LYR4JwdXcWTcrLKwUx9jwsHBgYp0T5rfkzHD616Fxz9zzv9bGenPnAz0HugATXs/
+386Nrm7r8dWVfOl8/cg6NJqbn14SnpwYrh5ICce1nVtOriptKHgbXnwp2bmk61bw
+5tJL59anNp8/cvZrcy/J/3FaKNXbIurHbk/OCmH7yRT2D+W0VnjtYf+tWt+cjuzD
+v391nanNb1/2q23Pwu8jhQue5XQn/HuyPs1L9M5uV6sXXCkbqUv+vOydP/GqID8v
+fPSi8+29M9icXbS574W6LRu9NC7IyzOv5Uy0lN0rr3jYPXp9m/agaPyPsqJvcqyj
+oa1l95301SN9i1Dq6Y25K4vtobGMYz1mnneX7w39+jwZLl8XfedJbuh/vDa16dSn
+E4GsjWs+1BR7s/4C8NcqQQ==
+=EgwV
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ashishchaudhary
+
+==================================================================
