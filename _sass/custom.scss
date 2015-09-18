@@ -1,3 +1,15 @@
 /*- Custom style -*/
 
 // -- Put custom style under this point -- //
+
+#bitcoin{
+	max-width: 3%;
+	display: inline-block;
+	vertical-align: middle;
+	margin: auto;
+}
+
+#btcaddress{
+	visibility: hidden;
+	text-align: center;
+}
