@@ -1,11 +1,11 @@
 # Site settings
 title: Ashish Chaudhary
 description: "Ashish Chaudhary's blog"
-url: "http://ashishchaudhary.in"
+url: "https://ashishchaudhary.in"
 author:
   name: "Ashish Chaudhary"
   email: "me@ashishchaudhary.in"
-  url: "http://ashishchaudhary.in"
+  url: "https://ashishchaudhary.in"
 
 # Build settings
 baseurl: /
