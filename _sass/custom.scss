@@ -25,6 +25,12 @@ width:0;
 margin-top:-32767px;/* thank you Erik J - negate effect of float*/
 }
 
+body:after
+{
+    content: url("https://ashishchaudhary.in/images/site/awesome.svg") url("https://ashishchaudhary.in/images/site/bad.svg") url("https://ashishchaudhary.in/images/site/bitcoin-128-000000.png") url("https://ashishchaudhary.in/images/site/chart.png") url("https://ashishchaudhary.in/images/site/error.svg") url("https://ashishchaudhary.in/images/site/good.svg") url("https://ashishchaudhary.in/images/site/mediocre.svg") url("https://ashishchaudhary.in/images/site/send.svg");
+    display: none;
+}
+
 ::-webkit-input-placeholder {
    text-align: center;
    font-weight: bold;
