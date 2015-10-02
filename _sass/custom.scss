@@ -29,28 +29,28 @@ margin-top:-32767px;/* thank you Erik J - negate effect of float*/
    text-align: center;
    font-weight: bold;
    color: #008a3c;
-   line-height: 3;
+   line-height: 2.5;
 }
 
 :-moz-placeholder { /* Firefox 18- */
    text-align: center; 
    font-weight: bold;
    color: #008a3c;
-   line-height: 3;
+   line-height: 2.5;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    text-align: center;
    font-weight: bold;
    color: #008a3c;
-   line-height: 3;
+   line-height: 2.5;
 }
 
 :-ms-input-placeholder {  
    text-align: center;
    font-weight: bold;
    color: #008a3c;
-   line-height: 3;
+   line-height: 2.5;
 }
 
 #bitcoin{
@@ -69,11 +69,16 @@ margin-top:-32767px;/* thank you Erik J - negate effect of float*/
 	width: 100%;
 	border:2px dashed #008a3c;
 	border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
 	padding: 5px;
+      overflow: hidden;
+      resize:none;
 }
 
 #message:focus{
 	border:2px solid #008a3c;
+      outline: 0;
 }
 
 #sendbutton{
