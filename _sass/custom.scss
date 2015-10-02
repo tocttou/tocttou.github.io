@@ -2,6 +2,57 @@
 
 // -- Put custom style under this point -- //
 
+* {margin:0;padding:0;} 
+
+html, body {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+  padding-bottom: 180px;}  /* must be same height as the footer */
+
+#footer {position: relative;
+  margin-top: -180px; /* negative value of footer height */
+  height: 180px;
+  clear:both;} 
+
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+content:"";
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+   font-weight: bold;
+   color: #008a3c;
+   line-height: 3;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center; 
+   font-weight: bold;
+   color: #008a3c;
+   line-height: 3;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+   font-weight: bold;
+   color: #008a3c;
+   line-height: 3;
+}
+
+:-ms-input-placeholder {  
+   text-align: center;
+   font-weight: bold;
+   color: #008a3c;
+   line-height: 3;
+}
+
 #bitcoin{
 	max-width: 3%;
 	display: inline-block;
@@ -9,7 +60,79 @@
 	margin: auto;
 }
 
+.br-wrapper{
+	display: inline-block;
+	margin: auto;
+}
+
+#message{
+	width: 100%;
+	border:2px dashed #008a3c;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#message:focus{
+	border:2px solid #008a3c;
+}
+
+#sendbutton{
+	display: inline-block;
+	margin: auto;
+	box-shadow: 5px 5px 3px #336633;
+}
+
+#sendbutton:hover{
+	cursor: pointer;
+}
+
 #btcaddress{
 	visibility: hidden;
 	text-align: center;
 }
+
+#status{
+	display: none;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  display: none;
+  position: relative;
+  margin: auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #008a3c;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+  }

@@ -1,13 +1,52 @@
 ---
 layout: default
 ---
+
+<!-- include relevant js -->
+<script src="{{ "https://code.jquery.com/jquery-2.1.4.min.js" }}"></script>
+<script src="{{ "https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" }}"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src="{{ "js/jquery.barrating.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "js/rating.js" | prepend: site.baseurl }}"></script>
+<!--      -->
+
 <article id="post-page">
 	<h2>{{ page.title }}</h2>		
 	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
 	<div class="content">
 
 		{{ content }}
-		
+
+		<hr><br>
+
+		<table style="width:100%">
+		  <tr>
+
+		  	<td width="40%">
+				<select id="rating">
+					<option value="bad">Bad</option>
+					<option value="mediocre" selected>Mediocre</option>
+					<option value="good">Good</option>
+					<option value="awesome">Awesome</option>
+				</select>
+			</td>
+
+			<td width="50%">
+			 	<textarea id = "message" placeholder= "Name, Email (optional), Message" style="margin: auto"></textarea>
+		   	</td>
+
+		   	<td style="text-align: center">
+		  		<img id = "sendbutton" src = "{{ "images/site/send.svg" | prepend: site.baseurl }}" >
+		  		<div class="spinner">
+		  			<div class="double-bounce1"></div>
+		  			<div class="double-bounce2"></div>
+		  		</div>
+		  		<img id = "status" src = "">
+		 	</td>
+
+		  </tr>
+
+		</table>
 	</div>
 </article>
 

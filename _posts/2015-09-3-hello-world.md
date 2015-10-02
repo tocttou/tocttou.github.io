@@ -1,6 +1,16 @@
 ---
 title: Hello World
 ---
-![Test]({{ site.baseurl}}images/posts/pikachu.png)
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis consectetur voluptate deserunt officia minima placeat tempore illum asperiores quo assumenda praesentium? Facilis libero error ratione doloribus debitis delectus asperiores minima ab velit quam. Natus ea, vero totam recusandae autem, corporis minima, animi eos perferendis omnis ut asperiores magni tempore. Repellendus aliquam saepe perspiciatis laborum, excepturi sit libero dignissimos debitis eaque itaque quos, accusantium sed amet tempora temporibus perferendis possimus, quisquam minus fuga! Laudantium, tenetur, consectetur! Quas itaque hic consequatur accusamus consectetur, quia odio eos amet quasi pariatur! Ratione, similique.
+I have always wanted to write a blog but it never materialised till now. Many people have recommened this as a good practice because: 
+
+1. A lot of thoughts go undocumented otherwise.
+2. Others may also comment on what I write thus helping me broaden my viewpoint.
+
+While I am certain about the first point, will anyone ever read whatever I write here? Probably yes, if I push it in their face in person :O or maybe if I write well or maybe just because people like reading stuff? I don't know. I don't even know what should I write about, maybe something related to tech, or something that I found hillarious? This is the first time that my writings will be in public. Be kind people! If we consider that I was struggling with how this post should begin just 5 minutes ago, I think I'll do just fine. 
+
+> Everything starts somewhere, though many physicists disagree. But people have always been dimly aware of the problem with the start of things. They wonder how the snowplough driver gets to work, or how the makers of dictionaries look up the spelling of words. <br> <span style = "float: right; margin: auto">-- Terry Pratchett, Hogfather</span> <br>
+
+Now that I am done wondering how to start, lets see if this gains some traction or just lies low unknown in the void that the Internet is.
+
+Please tell me if you liked the posts or not. Do mention your name and/or email as well.
