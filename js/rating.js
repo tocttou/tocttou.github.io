@@ -1,15 +1,15 @@
-$(function() {
-	$('#rating').barrating({
-		theme: 'bars-movie',
-		initialRating: "mediocre"
-	});
-	$('#message').val('');
-	$('#rating').val("mediocre");
-});
-
 $( document ).ready(function() {
 
 	var fire_base = new Firebase('https://ashish-blog.firebaseio.com/');
+
+	$(function() {
+		$('#rating').barrating({
+			theme: 'bars-movie',
+			initialRating: "mediocre"
+		});
+		$('#message').val('');
+		$('#rating').val("mediocre");
+	});
 
 	if ($.ui) {
 	    (function () {
