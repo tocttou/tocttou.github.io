@@ -2,6 +2,8 @@ $( document ).ready(function() {
 
 	var fire_base = new Firebase('https://ashish-blog.firebaseio.com/');
 
+	var article_name = window.location.pathname.replace('/','').replace('/','');
+
 	$(function() {
 		$('#rating').barrating({
 			theme: 'bars-movie',
@@ -80,7 +82,7 @@ $( document ).ready(function() {
 				$("#status").css("display", "inline-block");
 			};
 
-			fire_base.push({rating: article_rating, message: article_message}, onComplete);
+			fire_base.push({article: article_name, rating: article_rating, message: article_message}, onComplete);
 		}
 	});
 
