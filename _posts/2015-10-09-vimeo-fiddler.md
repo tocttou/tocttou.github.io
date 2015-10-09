@@ -4,13 +4,13 @@ title: Making an automated content downloader using Fiddler
 
 There are times when you want to download some video but it is available only for streaming. You can use various online video downloaders for that purpose and they work well enough for popular websites. What if you want to do a batch download? There are plenty of video download managers available online and most of them are malware vectors like [this chrome extension](http://rdiodownloader.com/) which has obfuscated javascript so you don't even know what it is doing in the background. Another solution is to write a scrapper in your favourite scripting language.
 
-I'll introduce you to another way to download videos/songs automatically in the background while you enjoy the content using [Fiddler](http://www.telerik.com/fiddler). Fiddler is an awesome tool to inspect inbound/outbound data from your devices and play with it. In this post we'll make a video downloader (**Windows alert!**) Fiddler add-on for [Vimeo](https://vimeo.com/) but it can also be extended for other websites given that they use ['Progressive Download' and not 'Streaming'](http://www.onlinevideo.net/2011/05/streaming-vs-progressive-download-vs-adaptive-streaming/) but most popular services use streaming server these days. Lynda.com (and another e-learing service which I subscribe to so I won't name it), to my surprise, uses progressive download.
+I'll introduce you to another way to download videos/songs automatically in the background while you enjoy the content using [Fiddler](http://www.telerik.com/fiddler). Fiddler is an awesome tool to inspect inbound/outbound data from your devices and play with it. In this post we'll make a video downloader (**Windows alert!**) Fiddler add-on for [Vimeo](https://vimeo.com/) but it can also be extended for other websites given that they use ['Progressive Download' and not 'Streaming'](http://www.onlinevideo.net/2011/05/streaming-vs-progressive-download-vs-adaptive-streaming/) but most popular services use streaming server these days. Lynda.com (and another e-learning service which I subscribe to so I won't name it), to my surprise, uses progressive download.
 
 **Objective:**
 
 * Whenever we start a video at vimeo.com, the application will download and store the video at a pre-specified location in background.
 
-Lets get started.
+Let's get started.
 
 First of all we'll need Fiddler2. Dowload it from [here](http://www.telerik.com/download/fiddler/fiddler2). Fire up Visual Studio (any version will do) and create a new project. Select `Class Library` targeted at **.Net Framework 3.5** from the installed templates.
 
