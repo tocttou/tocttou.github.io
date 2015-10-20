@@ -37,4 +37,4 @@ custom_nav_footer: false
 reverse: false
 
 gems:
-- jemoji
+    - jemoji

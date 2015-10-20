@@ -66,4 +66,4 @@ Now that we have written the code, build it. The generated files can be found in
 
 Thats it! Just run fiddler now, minimise it, and start watcing videos on vimeo.com from your browser. All videos will get downloaded in the background to the specified directory as you enjoy your content.
 
-In the coming weeks, I'll write some posts about using Fiddler to test the security of your webapps & APIs. So many things to write about, not enough  ink :p
+In the coming weeks, I'll write some posts about using Fiddler to test the security of your webapps & APIs. So many things to write about, not enough  ink <span class="brofist">:smile:</span>.

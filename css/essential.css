@@ -29,3 +29,8 @@
         margin-top: 2%;
     }
 }
+
+.brofist {
+    display: inline-flex;
+    vertical-align: text-top;
+}
