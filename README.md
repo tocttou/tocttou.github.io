@@ -1,6 +1,6 @@
 ## ashishchaudhary.in
 
-* Source code for my personal website. 
+* Source code for my website. 
 * Uses [Emerald](https://github.com/KingFelix/emerald) theme.
 
 ## License
