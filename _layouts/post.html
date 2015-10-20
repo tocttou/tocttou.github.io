@@ -11,34 +11,31 @@ layout: default
 
 		<hr><br>
 
-		<table style="width:100%">
-		  <tr>
+		<div class="feedback">
 
-		  	<td width="40%">
+			<div class="feedback-box rating-box">
 				<select id="rating">
 					<option value="bad">Bad</option>
 					<option value="mediocre" selected>Mediocre</option>
 					<option value="good">Good</option>
 					<option value="awesome">Awesome</option>
 				</select>
-			</td>
+			</div>
 
-			<td width="50%">
-			 	<textarea id = "message" placeholder= "Name, Email (optional), Message"></textarea>
-		   	</td>
+			<div class="feedback-box write-box">
+				<textarea id = "message" placeholder= "Name, Email (optional), Message"></textarea>
+			</div>
 
-		   	<td style="text-align: center">
-		  		<img id = "sendbutton" src = "{{ "images/site/send.svg" | prepend: site.baseurl }}" >
+			<div class="feedback-box send-box">
+				<img id = "sendbutton" src = "{{ "images/site/send.svg" | prepend: site.baseurl }}" >
 		  		<div class="spinner">
 		  			<div class="double-bounce1"></div>
 		  			<div class="double-bounce2"></div>
 		  		</div>
 		  		<img id = "status" src = "">
-		 	</td>
+			</div>				
 
-		  </tr>
-
-		</table>
+		</div>
 	</div>
 </article>
 
