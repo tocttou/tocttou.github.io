@@ -1,0 +1,31 @@
+  .feedback {
+      display: table;
+      width: 100%;
+  }
+
+  .feedback-box {
+      display: table-cell;
+      text-align: center;
+      vertical-align:middle;
+      margin:auto;
+  }
+
+  .rating-box {
+      width: 40%;
+  }
+
+  .write-box {
+    width: 50%;
+  }
+
+  .send-box {
+    width: 10%;
+  }
+
+  @media (max-width: 768px) {
+    .feedback-box {
+        display: block;
+        width: 100%;
+        margin-top: 2%;
+    }
+}
