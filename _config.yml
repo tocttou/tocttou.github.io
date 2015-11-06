@@ -14,7 +14,7 @@ highlighter: pygments
 source: .
 destination: ./_site
 permalink: /:title
-paginate: 4
+paginate: 3
 paginate_path: /page:num/
 
 # Default values

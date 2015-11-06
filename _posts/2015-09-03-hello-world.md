@@ -2,10 +2,10 @@
 title: Hello World
 ---
 
-I have always wanted to write a blog but it never materialised till now. Many people have recommened this as a good practice because: 
+I have always wanted to write a blog but it didn't materialise till now. Many people recommened this as a good practice because: 
 
 1. A lot of thoughts go undocumented otherwise.
-2. Others may also comment on what I write thus helping me broaden my viewpoint.
+2. Others may also comment on what you write thus helping you broaden your viewpoint.
 
 While I am certain about the first point, will anyone ever read whatever I write here? Probably yes, if I push it in their face in person :O or maybe if I write well or maybe just because people like reading stuff? I don't know. I don't even know what should I write about, maybe something related to tech, or something that I found hillarious? This is the first time that my writings will be in public. Be kind people! If we consider that I was struggling with how this post should begin just 5 minutes ago, I think I'll do just fine. 
 

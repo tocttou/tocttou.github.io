@@ -1,3 +1,2 @@
 User-agent: *
 Disallow: /contact.html
-Disallow: /contact.html#
