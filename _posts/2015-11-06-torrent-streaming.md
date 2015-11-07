@@ -4,22 +4,9 @@ title: Making my own torrent streaming service
 
 Few weeks back Microsoft came to my college for the annual [Code.Fun.Do](https://www.acadaccelerator.com/Home/Events) hackathon. I was planning to make an app that extracted text from photographs taken by the phone camera and then does *something*. The idea had a lot of potential but initial tests were not very successful, primarily because text extraction was messed up nearly 8/10 times. It was clear that a lot more training and traindata was required for this to work and that demanded time but there was dearth of it and even more considering that mine was a one man team. So I decided to make an app that can be used to watch movies from torrents on mobile phone.
 
-Microsoft guys were very excited to see it work but apparently they couldn't support such *illegal activities*, and fairly so. Being born and raised in India, a country where piracy is as natural as breathing, I have very conflicting thoughts about copyrights on digital commodities. When I was a kid, I was absolutely unaware of the concept of piracy and this is still true for the majority in India. The apparent vices attached to being a pirate are much more pronounced now that the [MAFIAA](http://mafiaa.org/) (quite literally) are going after piracy with a very strong hand. I think this is a very big mistake and a short-sighted move on their part. Instead of making the content accessible to the masses, they are ruining it for everyone. Sure Netflix is a positive step in this direction but
+Microsoft guys were very excited to see it work but apparently they couldn't support such *illegal activities*, and fairly so.
 
-1. It is not widely available.
-2. Even if it is available, a lot of shows are missing from non-US markets.
-3. Not everyone has hi-speed internet to stream movies.
-4. **Torrenting is much more lucrative.**
-
-The fourth point is of particular importance because even if the first three points are satisfied, people won't switch to a paid system if fourth isn't. I switched to [Rdio](http://www.rdio.com/) because they provide a much better alternative at a price that I can afford. If the music industry can do that, movies should also.
-
-> but... but... its theft... its wrong...
-
-Its digital, Bitch. Its infinitely replicable. Stop gagging people and up your game or play by the rules people lay. Physical commodity rules cannot and should not be copied over to digital commodities.
-
-**My viewpoint about piracy is not as binary as it looks like after reading the above rambling. In fact, it requires another post of its own. There is a lot more to discuss. Till then, let us assume that piracy is for the greater good in its current form.**
-
-**Note:** Since the MAFIAA recently shut down YTS API which I was using for this app, you'll have to use some other service like [this one](https://getstrike.net/api/) for aggregating torrents and [this one](https://www.themoviedb.org/documentation/api?language=en) for displaying the movie data. I won't publish the code for this app since it is obsolete now.
+**Note:** Since the [MAFIAA](http://mafiaa.org/) (quite literally) recently shut down YTS API which I was using for this app, you'll have to use some other service like [this one](https://getstrike.net/api/) for aggregating torrents and [this one](https://www.themoviedb.org/documentation/api?language=en) for displaying the movie data. I won't publish the code for this app since it is obsolete now.
 
 <hr>
 
@@ -36,7 +23,7 @@ Its digital, Bitch. Its infinitely replicable. Stop gagging people and up your g
 1. The mobile app is built using [Apache Corodova](https://cordova.apache.org/).
 2. For styling I used [Bootstrap3](http://getbootstrap.com/), app logic is written in vanilla JS. Alternatively, [Ionic](http://ionicframework.com/) is a very good choice for styling and writing app logic using AngularJS.
 3. An intermediary API is setup on a DigitalOcean server using the [Bottle Microframework](http://bottlepy.org/docs/dev/tutorial.html) in python. Make sure that you enable [CORS](http://bottlepy.org/docs/dev/recipes.html#using-the-hooks-plugin) because the app uses AJAX calls.
-4. [Transmission-daemon](http://www.transmissionbt.com/) running on the server to handle the requests related to torrents.
+4. Torrenting is blocked by my ISP so [transmission-daemon](http://www.transmissionbt.com/) should run on the DO server to handle the requests related to torrents.
 5. Nodejs is used to stream the movie. [vid-streamer](https://github.com/meloncholy/vid-streamer) is a good choice for that as it handles a lot of other stuff like using correct MIME types and [psuedo-streaming](http://1stdev.com/tremendum-transcoder/articles/seeking-videos-beyond-the-buffer-line/#html5_pseudo-streaming) as well.
 
 ### Step3: Implementing the program flow
@@ -48,7 +35,7 @@ Its digital, Bitch. Its infinitely replicable. Stop gagging people and up your g
 5. The vid-streamer configuration takes the directory input that houses the media files to stream. So if `file.mp4` is present in `mydir/userID/movieName` and vid-streamer is running at `$serverIP:8000` and monitoring `mydir`, the url `$serverIP:8000/userID/movieName/file.mp4` will correspond to the movie file.
 6. Tapping the movie name on downloads page sends a request to the python server to check if the movie download is complete. If yes, the server returns the streaming URL which is then embedded in a `<video>` tag on the app and video streaming starts!
 
-**Note:** While its worth noting that pre-loading the movie takes only 3-4 minutes (and is recommended if the app is used by a small group or for personal use), there is another way to stream the movie i.e. directly from the torrent (which can be erratic at times). For that you can make a nodejs server and use [peerflix](https://github.com/mafintosh/peerflix) to stream your torrent directly. Alternatively, you can use bare metal [torrent-stream](). Be careful with the MIME types though. Or if you are feeling extra adventurous, write your own implementation of the Bittorent protocol.
+**Note:** While its worth noting that pre-loading the movie on the DigitalOcean server takes only 3-4 minutes (and is recommended if the app is used by a small group or for personal use), there is another way to stream the movie i.e. directly from the torrent (which can be erratic at times). For that you can make a nodejs server and use [peerflix](https://github.com/mafintosh/peerflix) to stream your torrent directly. Alternatively, you can use bare metal [torrent-stream](). Be careful with the MIME types though. Or if you are feeling extra adventurous write your own implementation of the Bittorent protocol.
 
 
 ### Step4: Profit
@@ -57,4 +44,3 @@ Going through the procedure produced this app:
 
 <iframe width="100%" height="380px" src="https://www.youtube.com/embed/4CsRu8g1sz0" frameborder="0" allowfullscreen></iframe>
 <br>
-<span class="centering"><span class="brofist">:rose:</span> **R.I.P. YTS/YIFY** <span class="brofist">:rose:</span></span>
