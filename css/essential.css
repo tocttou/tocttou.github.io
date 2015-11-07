@@ -34,3 +34,8 @@
     display: inline-flex;
     vertical-align: text-top;
 }
+
+.centering {
+    margin: auto;
+    display: table;
+}
