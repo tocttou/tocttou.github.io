@@ -1,5 +1,8 @@
 ---
 title: Making an automated content downloader using Fiddler
+tags:
+    - fiddler
+published: true
 ---
 
 There are times when you want to download some video but it is available only for streaming. You can use various online video downloaders for that purpose and they work well enough for popular websites. What if you want to do a batch download? There are plenty of video download managers available online and most of them are malware vectors like [this chrome extension](http://rdiodownloader.com/) which has obfuscated javascript so you don't even know at first sight what it is doing in the background. Another solution is to write a scrapper in your favourite scripting language.

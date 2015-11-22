@@ -1,10 +1,14 @@
 ---
 title: Making my own torrent streaming service
+tags:
+    - torrents
+    - python
+published: true
 ---
 
 Few weeks back Microsoft came to my college for the annual [Code.Fun.Do](https://www.acadaccelerator.com/Home/Events) hackathon. I was planning to make an app that extracted text from photographs taken by the phone camera and then does *something*. The idea had a lot of potential but initial tests were not very successful, primarily because text extraction was messed up nearly 8/10 times. It was clear that a lot more training and traindata was required for this to work and that demanded time but there was dearth of it and even more considering that mine was a one man team. So I decided to make an app that can be used to watch movies from torrents on mobile phone.
 
-Microsoft guys were very excited to see it work but of course they can't be supportive of it because it is *not enitrely legal*. 
+Microsoft guys were very excited to see it work but of course they can't be supportive of it because it is *not enitrely legal*.
 
 **Note:** Since the [MAFIAA](http://mafiaa.org/) (quite literally) recently shut down YTS API which I was using for this app, you'll have to use some other service like [this one](https://getstrike.net/api/) for aggregating torrents and [this one](https://www.themoviedb.org/documentation/api?language=en) for displaying the movie data. I won't publish the code for this app since it is obsolete now.
 

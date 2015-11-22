@@ -1,5 +1,6 @@
 ---
 title: Hello World
+published: true
 ---
 
 I have always wanted to write a blog but it didn't materialise till now. Many people recommened this as a good practice because: 
