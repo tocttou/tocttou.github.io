@@ -59,7 +59,7 @@ As for the networking to and fro from the container, we have to expose the ports
 
 ### The deployment tool:
 
-To solve problem 4, we created a tool named Beast. Beast is written in python and performs all the tasks from syncing the challenges with the production server to building the challenge images and setting up the xinetd service. It can be used to deploy challenges locally or to multiple remote machines at once. After any action is performed, our Slack channel recieves a notification from Beast about the deployment.
+To solve problem 4, we created a tool named Beast. Beast is written in python and performs all the tasks from syncing the challenges with the production server to building the challenge images and setting up the xinetd service. It can be used to deploy challenges locally or to multiple remote machines at once. After any action is performed, our Slack channel receives a notification from Beast about the deployment.
 
 <a href="/images/posts/beast.png" data-lightbox="beast_report" data-title="Beast report on Slack">![Beast report on Slack](/images/posts/beast.png)</a>
 
