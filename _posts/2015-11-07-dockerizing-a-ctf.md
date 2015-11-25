@@ -73,7 +73,7 @@ The keys used are self-explanatory. Note that the challenge creator can also spe
 
 Here is a sample of how the tool works:
 
-<div style="text-align: center"><blockquote class="imgur-embed-pub" lang="en" data-id="4jYSvcU"><a href="//imgur.com/4jYSvcU"></a></blockquote></div><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<div style="text-align: center"><blockquote class="imgur-embed-pub" lang="en" data-id="4jYSvcU"><a href="https://imgur.com/4jYSvcU"></a></blockquote></div><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 ### Whats next?
 
