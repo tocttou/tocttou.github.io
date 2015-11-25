@@ -34,28 +34,28 @@ body:after
 ::-webkit-input-placeholder {
    text-align: center;
    font-weight: bold;
-   color: #008a3c;
+   color: #d35400;
    line-height: 2.5;
 }
 
 :-moz-placeholder { /* Firefox 18- */
    text-align: center; 
    font-weight: bold;
-   color: #008a3c;
+   color: #d35400;
    line-height: 2.5;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    text-align: center;
    font-weight: bold;
-   color: #008a3c;
+   color: #d35400;
    line-height: 2.5;
 }
 
 :-ms-input-placeholder {  
    text-align: center;
    font-weight: bold;
-   color: #008a3c;
+   color: #d35400;
    line-height: 2.5;
 }
 
@@ -73,7 +73,7 @@ body:after
 
 #message{
 	width: 100%;
-	border:2px dashed #008a3c;
+	border:2px dashed #d35400;
 	border-radius: 10px;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
@@ -83,14 +83,14 @@ body:after
 }
 
 #message:focus{
-	border:2px solid #008a3c;
+	border:2px solid #d35400;
       outline: 0;
 }
 
 #sendbutton{
 	display: inline-block;
 	margin: auto;
-	box-shadow: 5px 5px 3px #336633;
+	box-shadow: 5px 5px 3px #d35400;
 }
 
 #sendbutton:hover{
@@ -118,7 +118,7 @@ body:after
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #008a3c;
+  background-color: #d35400;
   opacity: 0.6;
   position: absolute;
   top: 0;
