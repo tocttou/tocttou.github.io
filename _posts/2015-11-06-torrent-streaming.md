@@ -1,8 +1,5 @@
 ---
 title: Making my own torrent streaming service
-tags:
-    - torrents
-    - python
 published: true
 ---
 
