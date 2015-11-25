@@ -3,7 +3,7 @@ title: Dockerizing a CTF
 published: true
 ---
 
-[Backdoor](https://backdoor.sdslabs.co/) is a long-lived Capture The Flag style competition run by folks at [SDSLabs](https://sdslabs.co/). For the uninitiated, in [Capture The Flag (CTF)](http://crushbeercrushcode.org/2012/10/ctfs-keeping-up-your-skills-without-going-to-jail/) style events in netsec, participants have to solve questions in various categories like cryptography, web, binary exploitations etc. Backdoor hosts CTFs from time to time having duration ranging from 6 hours to 1 day.
+[Backdoor](https://backdoor.sdslabs.co/) is a long-lived Capture The Flag style competition run by folks at [SDSLabs](https://sdslabs.co/). For the uninitiated, in Capture The Flag (CTF) style events in netsec, participants have to solve questions in various categories like cryptography, web, binary exploitations etc. Backdoor hosts CTFs from time to time having duration ranging from 6 hours to 1 day.
 
 On the basis of how challenges are presented on Backdoor, there are two broad categories:
 
