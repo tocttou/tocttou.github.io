@@ -3,9 +3,11 @@ title: Working at SDSLabs
 published: true
 ---
 
-Note: This is a crosspost from the [SDSLabs blog](https://blog.sdslabs.co/2015/12/working-sdslabs-9/). <br>
+Note: This is a crosspost from the [SDSLabs blog](https://blog.sdslabs.co/2015/12/working-sdslabs-9/).
 
 <hr>
+
+<br>
 
 _This post is a continuation to SDSLabs' now customary series of posts before the recruitment in January where we write about our experience with lab._
 
