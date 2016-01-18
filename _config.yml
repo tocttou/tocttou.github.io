@@ -29,7 +29,7 @@ defaults:
 # Custom variables
 copyright : ""
 owner : "Ashish Chaudhary"
-year : "© 2015 "
+year : "© 2016 "
 
 # Options
 custom_header: false
