@@ -25,7 +25,7 @@ Microsoft guys were very excited to see it work but of course they can't be supp
 2. For styling I used [Bootstrap3](http://getbootstrap.com/), app logic is written in vanilla JS. The app had to run on WindowsPhone8. Alternatively, [Ionic](http://ionicframework.com/) is a very good choice for styling and writing app logic using AngularJS; but given the time constraints, I did not opt for this.
 3. An intermediary API is setup on a DigitalOcean server using the [Bottle Microframework](http://bottlepy.org/docs/dev/tutorial.html) in python. It is necessary to enable [CORS](http://bottlepy.org/docs/dev/recipes.html#using-the-hooks-plugin) because the app has to use AJAX calls.
 4. Torrenting is blocked by my ISP so [transmission-daemon](http://www.transmissionbt.com/) should run on the DO server to handle the requests related to torrents.
-5. Nodejs is used to stream the movie. [vid-streamer](https://github.com/meloncholy/vid-streamer) is a good choice for that as it handles a lot of other stuff like using correct MIME types and [psuedo-streaming](http://1stdev.com/tremendum-transcoder/articles/seeking-videos-beyond-the-buffer-line/#html5_pseudo-streaming) as well.
+5. Nodejs is used to stream the movie. [vid-streamer](https://github.com/meloncholy/vid-streamer) is a good choice for that as it does a lot of heavy-lifting for us, like using correct MIME types and [psuedo-streaming](http://1stdev.com/tremendum-transcoder/articles/seeking-videos-beyond-the-buffer-line/#html5_pseudo-streaming) as well.
 
 ### Step3: Implementing the program flow
 
