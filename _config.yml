@@ -10,7 +10,6 @@ author:
 # Build settings
 baseurl: /
 markdown: kramdown
-highlighter: pygments
 source: .
 destination: ./_site
 permalink: /:title
@@ -36,5 +35,4 @@ custom_header: false
 custom_nav_footer: false
 reverse: false
 
-gems:
-    - jemoji
+gems: [jekyll-paginate]
