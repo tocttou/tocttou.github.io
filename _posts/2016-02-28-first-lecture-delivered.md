@@ -7,9 +7,9 @@ A couple of weeks ago I delivered a hands-on lecture on python basics to freshme
 
 The variant of choice here was python3. An important topic of handling exceptions was left because of the time constraint I had while preparing the slides. I _might_ add those portions in the coming days. The lecture was followed by two assignments. Here are the slides:
 
-<div style="text-align: center;"><iframe src="//slides.com/ashishchaudhary/deck/embed" width="676" height="493" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div style="text-align: center;"><iframe src="assets/slides-deck.html" width="676" height="493" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 
-Uggghhh... the slides.com iframe doesn't work with this site because it's not on https. So I have embeded the exported html file (had to manually change http resources to https). [Here is the link on slides.com](https://slides.com/ashishchaudhary/deck/).
+Uggghhh... the slides.com iframe makes this page give a mixed content error because it is on http. So I have embeded the exported html file (had to manually change http resources to https). [Here is the link on slides.com](https://slides.com/ashishchaudhary/deck/).
 
 **Edit:** This post was written on 29th February 2016 at ~ 5:00 AM IST. The post worked great locally with jekyll 3.1.2 but didn't show up on gh-pages after I pushed it to github. I faced a similar problem once when certain content that I was trying to load was on http so it didn't work. But that didn't make the build fail. Now the build is apparently failing but I am not getting any warning mail from github. Here is what I tried:
 
