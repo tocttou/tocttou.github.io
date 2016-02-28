@@ -11,13 +11,13 @@ The variant of choice here was python3. An important topic of handling exception
 
 Uggghhh... the slides.com iframe doesn't work with this site because it's not on https. So I have embeded the exported html file (had to manually change http resources to https). [Here is the link on slides.com](https://slides.com/ashishchaudhary/deck/).
 
-Edit: This post was written on 29th February 2016 at ~ 5:00 AM IST. The post worked great locally with jekyll 3.1.2 but didn't show up on gh-pages after I pushed it to github. I faced a similar problem once when certain content that I was trying to load was on http so it didn't work. But that didn't make the build fail. Now the build is apparently failing but I am not getting any warning mail from github. So what I tried:
+**Edit:** This post was written on 29th February 2016 at ~ 5:00 AM IST. The post worked great locally with jekyll 3.1.2 but didn't show up on gh-pages after I pushed it to github. I faced a similar problem once when certain content that I was trying to load was on http so it didn't work. But that didn't make the build fail. Now the build is apparently failing but I am not getting any warning mail from github. Here is what I tried:
 
 1. move all http links to https -> doesn't show up
 2. remove the iframe completely -> doesn't show up
 3. purge the cloudflare cache and delete the local cache as well -> doesn't show up
 4. change the publication date to 28th Feb 2016 from 29th Feb 2016 -> shows up - yay!
-5. add the ifram back -> shows up - yay!
+5. add the iframe back -> shows up - yay!
 6. change the date back to 29th -> doesn't show up
 7. change the date back to 28th -> shows up - yay!
 
