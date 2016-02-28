@@ -7,7 +7,7 @@ A couple of weeks ago I delivered a hands-on lecture on python basics to freshme
 
 The variant of choice here was python3. An important topic of handling exceptions was left because of the time constraint I had while preparing the slides. I _might_ add those portions in the coming days. The lecture was followed by two assignments. Here are the slides:
 
-<div style="text-align: center;"><iframe src="assets/slides-deck.html" width="676" height="493" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div style="text-align: center;"><iframe src="//slides.com/ashishchaudhary/deck/embed" width="676" height="493" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 
 Uggghhh... the slides.com iframe doesn't work with this site because it's not on https. So I have embeded the exported html file (had to manually change http resources to https). [Here is the link on slides.com](https://slides.com/ashishchaudhary/deck/).
 
