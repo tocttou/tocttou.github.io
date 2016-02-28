@@ -9,4 +9,4 @@ The variant of choice here was python3. An important topic of handling exception
 
 <div style="text-align: center;"><iframe src="assets/slides-deck.html" width="676" height="493" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 
-Uggghhh... the slides.com iframe doesn't work with this site because it's not on https. So I have embeded the exported html file. [Here is the link on slides.com](http://slides.com/ashishchaudhary/deck/).
+Uggghhh... the slides.com iframe doesn't work with this site because it's not on https. So I have embeded the exported html file (had to manually change http resources to https). [Here is the link on slides.com](https://slides.com/ashishchaudhary/deck/).
