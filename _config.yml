@@ -30,6 +30,8 @@ copyright : ""
 owner : "Ashish Chaudhary"
 year : "© 2016 "
 
+future: true
+
 # Options
 custom_header: false
 custom_nav_footer: false
