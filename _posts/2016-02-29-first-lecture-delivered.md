@@ -1,5 +1,5 @@
 ---
-title: First Lecture Delivered (and a small bug in gh-pages)
+title: First Lecture Delivered (and a small bug in gh-pages?)
 published: true
 ---
 
@@ -22,3 +22,5 @@ Uggghhh... the slides.com iframe makes this page give a mixed content error beca
 7. change the date back to 28th -> shows up - yay!
 
 So did the github team forgot to account for leap years? Maybe is it a bug in [an older version of jekyll](https://pages.github.com/versions/)? I have sent the bug report to support@github. Waiting for response!
+
+**Edit2:** Github replied. It was not a _bug_ bug. The issue was caused due to a timezone offset. Adding `future: true` to the `_config.yml` file solved the issue. More about it [here](http://jekyllrb.com/docs/upgrading/2-to-3/#all-my-posts-are-gone-whered-they-go).
