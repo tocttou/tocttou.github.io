@@ -21,4 +21,4 @@ Uggghhh... the slides.com iframe makes this page give a mixed content error beca
 6. change the date back to 29th -> doesn't show up
 7. change the date back to 28th -> shows up - yay!
 
-So did the github team forgot to account for leap years? I have sent the bug report to support@github. Waiting for response!
+So did the github team forgot to account for leap years? Maybe is it a bug in [an older version of jekyll](https://pages.github.com/versions/)? I have sent the bug report to support@github. Waiting for response!
