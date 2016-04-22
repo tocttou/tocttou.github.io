@@ -3,11 +3,11 @@ title: ./gsoc init
 published: true
 ---
 
-GSoC 2016 results are out now and I have been selected to work with [CloudCV](http://cloudcv.org/) this summer. The idea that I'll be working on is 'CloudCV-fy your code' (not the final name of course). This involves creating a system where anyone can upload their model and train-validate-evaluate on CloudCV's infrastructure themselves and/or make it available for others to evaluate. As straightforward as it may sound, it does require meticulous planning. The coding period begins next month. Till then I have a lot to read up on, so that the execution is perfect.
+GSoC 2016 results are out now and I have been selected to work with [CloudCV](https://cloudcv.org/) this summer. The idea that I'll be working on is 'CloudCV-fy your code' (not the final name of course). This involves creating a system where anyone can upload their model and train-validate-evaluate on CloudCV's infrastructure themselves and/or make it available for others to evaluate. As straightforward as it may sound, it does require meticulous planning. The coding period begins next month. Till then I have a lot to read up on, so that the execution is perfect.
 
 There were some toy tasks given by CloudCV to filter the candidates. I chose toy task 2, which was to create a pipeline builder for OpenCV. At first I tried to implement the mockup given in task statement as it is and made this:
 
-<a href="http://i.imgur.com/Ll0TORp.png" data-lightbox="linked-cloudcv" data-title="Linked List implementation - CloudCV Toy Task 2">![Linked List implementation - CloudCV Toy Task 2](http://i.imgur.com/Ll0TORp.png)</a>
+<a href="https://i.imgur.com/Ll0TORp.png" data-lightbox="linked-cloudcv" data-title="Linked List implementation - CloudCV Toy Task 2">![Linked List implementation - CloudCV Toy Task 2](https://i.imgur.com/Ll0TORp.png)</a>
 
 But then upon discussion with mentor [Harsh Agrawal](https://github.com/dexter1691), I decided to implement it as a graph instead. Linked list was what others were doing anyway. This helped me make my proposal stand out from the rest. The end result was this:
 
