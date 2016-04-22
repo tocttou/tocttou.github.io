@@ -37,4 +37,4 @@ I wanted to build something like this for a long time. This online IDE is comple
 
 ___
 
-I will blog about my progress with GSoC frequently. I love writing these blog posts.
+I will blog about my progress with GSoC frequently. Stay tuned for more!
