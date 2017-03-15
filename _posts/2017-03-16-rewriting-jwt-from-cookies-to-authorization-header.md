@@ -48,3 +48,5 @@ Authorization: Bearer mah.osum.token
 ```
 
 Note that the regex used to extract the `access_token` only works correctly when there is a single cookie. Modify the regex accordingly if you want to use multiple cookies.
+
+Relevant issue on Github can be tracked at: https://github.com/begriffs/postgrest/issues/773
