@@ -3,15 +3,15 @@ published: false
 ---
 Some time back I was working on a project (webapp + android app) that uses [Postgrest](https://postgrest.com/en/v0.4/) as an API server. The project uses JWT authentication, which is supported out of the box by Postgrest. My project has the following requirements:
 
-1. The webapp stores the JWT token in a cookie instead of localstorage. This cookie is set with `HttpOnly` option to make it immune to XSS attacks (remember to take care of CSRF attacks while working with cookies!).
+1. The webapp stores the JWT in a cookie instead of localstorage. This cookie is set with `HttpOnly` option to make it immune to XSS attacks (remember to take care of CSRF attacks while working with cookies!).
 
-2. With the android app I am not concerned about the user's JWT token getting stolen by XSS (no webview). I would like to use the standard Bearer authentication scheme here.
+2. With the android app I am not concerned about the user's JWT getting stolen by XSS (no webview). I would like to use the standard Bearer authentication scheme here.
 
 But setting the cookie as `HttpOnly` means that my legitimate javascript also cannot read the cookie and thus I cannot use the Bearer authentication scheme in the webapp, and Postgrest currently does not support JWT authentication using cookies. A simple solution here is to pass the API requests from the webapp through an Nginx reverse proxy that rewrites the token from the `Cookie` header to the `Authorization` header (for Bearer scheme) and relay it to the Postgrest backend.
 
 I was able to achieve this by using the [lux-nginx-module](https://github.com/openresty/lua-nginx-module) (on a sidenote, I would recommend using [Openresty](https://github.com/openresty) directly for a lot of added goodness over Nginx).
 
-If your Postgrest API server is on `http://localhost:3000` and your Nginx Proxy is on `http://localhost:3001`, you can use the following nginx proxy config and make request to your nginx proxy with a cookie `access_token` that contains the `jwt token` (it rewrites the headers to include a `Authorization: Bearer <jwt-token>` header:
+If your Postgrest API server is on `http://localhost:3000` and your Nginx Proxy is on `http://localhost:3001`, you can use the following nginx proxy config and make request to your nginx proxy with a cookie `access_token` that contains the `jwt` (it rewrites the headers to include a `Authorization: Bearer <jwt>` header:
 
 ```
 server {
