@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Some time back I was working on a project (webapp + android app) that uses [Postgrest](https://postgrest.com/en/v0.4/) as an API server. The project uses JWT authentication, which is supported out of the box by Postgrest. My project has the following requirements:
 
