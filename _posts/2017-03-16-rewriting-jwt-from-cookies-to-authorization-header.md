@@ -34,20 +34,20 @@ server {
 
 Actual request (to nginx proxy by the webapp):
 
-```
+{% highlight http %}
 GET  HTTP/1.1
 Host: localhost:3001
 Cookie: access_token=mah.osum.token
-```
+{% endhighlight %}
 <br />
 
 Request relayed to Postgrest:
 
-```
+{% highlight http %}
 GET  HTTP/1.1
 Host: localhost:3000
 Authorization: Bearer mah.osum.token
-```
+{% endhighlight %}
 <br />
 
 Note that the regex used to extract the `access_token` only works correctly when there is a single cookie. Modify the regex accordingly if you want to use multiple cookies.
