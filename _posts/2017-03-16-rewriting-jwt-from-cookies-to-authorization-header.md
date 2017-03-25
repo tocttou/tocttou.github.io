@@ -13,7 +13,7 @@ I was able to achieve this by using the [lux-nginx-module](https://github.com/op
 
 If your Postgrest API server is on `http://localhost:3000` and your Nginx Proxy is on `http://localhost:3001`, you can use the following nginx proxy config and make request to your nginx proxy with a cookie `access_token` that contains the `jwt` (it rewrites the headers to include a `Authorization: Bearer <jwt>` header:
 
-```
+{% highlight nginx %}
 server {
   listen  0.0.0.0:3001;
 
@@ -29,7 +29,7 @@ server {
      proxy_pass http://0.0.0.0:3000;
   }
 }
-```
+{% endhighlight %}
 <br />
 
 Actual request (to nginx proxy by the webapp):
