@@ -19,12 +19,12 @@ server {
 
   location / {
      rewrite_by_lua_block {
-       local cookie_value = ngx.req.get_headers()["Cookie"]
+       local cookie_value = ngx.req.get_headers()["Cookie"];
        if cookie_value ~= nil then
-         local jwt = cookie_value:match("access_token=([^ ]+)")
-         ngx.req.set_header("Authorization", "Bearer " .. jwt)
+         local jwt = cookie_value:match("access_token=([^ ]+)");
+         ngx.req.set_header("Authorization", "Bearer " .. jwt);
        end
-       ngx.req.clear_header("Cookie")
+       ngx.req.clear_header("Cookie");
      }
      proxy_pass http://0.0.0.0:3000;
   }
