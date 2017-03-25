@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 I will be mentoring students in Google Summer of Code this year for two organizations:
 
