@@ -7,70 +7,15 @@ Often times there is a need in the parent to maintain a state and give its contr
 
 Lets say you have a child component that simply displays a `text` prop passed to it:
 
-{% highlight javascript %}
-import React, { Component } from 'react';
-
-export default class FirstChild extends Component {  
-  render() {
-    return (
-      <div>
-        {this.props.text}
-      </div>
-    );
-  }
-}
-{% endhighlight %}
+<script src="https://gist.github.com/tocttou/65b78208a168a7f54aa2d888d70e3514.js"></script>
 
 And you have another child component that displays another `text` prop passed to it and logs "Rendering" to the console for each render cycle pass:
 
-{% highlight javascript %}
-import React, { Component } from 'react';
-
-export default class SecondChild extends Component {  
-  render() {
-    console.log("Rendering!");
-    return (
-      <div>
-        {this.props.data}
-      </div>
-    );
-  }
-}
-{% endhighlight %}
+<script src="https://gist.github.com/tocttou/42954e96f3eceec28a0b207927baabdd.js"></script>
 
 The common parent to these children updates a state `text` every 1 second and passes it as a prop to the first child:
 
-{% highlight javascript %}
-import React, { Component } from 'react';
-import FirstChild from './FirstChild';
-import SecondChild from './SecondChild';
-
-export default class Parent extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      text: Math.random()
-    };
-  }
-  
-  componentDidMount() {
-    setInterval(() => this.setState({ text: Math.random() }), 1000);
-  }
-  
-  render() {
-    return (
-      <div>
-        <FirstChild
-          text={this.state.text}
-        />  
-        <SecondChild
-          text="some random data"
-        />
-      </div>
-    );
-  }
-}
-{% endhighlight %}
+<script src="https://gist.github.com/tocttou/447eed019c83a5be8793ac9d04117488.js"></script>
 
 This periodic state update in turn causes re-renders for both the child components. But it is clear that the second child should not be affected by the parent state update at all, since the prop passed remains the same. Console log by running this code:
 
@@ -81,28 +26,17 @@ Rendering!
 ...
 ```
 
+
 This could be solved by using a `PureComponent` to implement the second child:
 
-{% highlight javascript %}
-import React, { PureComponent } from 'react';
-
-export default class SecondChild extends PureComponent {  
-  render() {
-    console.log("Rendering!");
-    return (
-      <div>
-        {this.props.data}
-      </div>
-    );
-  }
-}
-{% endhighlight %}
+<script src="https://gist.github.com/tocttou/d283b67dc8d66704c3c737411e364557.js"></script>
 
 Console log with modified code:
 
 ```
 Rendering!
 ```
+
 
 Working example for this can be found [here](https://www.webpackbin.com/bins/-KgDvo4EG5QTmFinbUlL).
 
@@ -113,5 +47,6 @@ shouldComponentUpdate(nextProps, nextState) {
   return !_.isEqual(this.props, nextProps) || !_.isEqual(this.state, nextState);
 }
 ```
+
 
 Or you could use ImmutableJS too.
