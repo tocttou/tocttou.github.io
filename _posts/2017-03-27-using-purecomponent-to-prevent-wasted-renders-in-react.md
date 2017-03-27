@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 The [shouldComponentUpdate](https://facebook.github.io/react/docs/react-component.html#shouldcomponentupdate) lifecycle event in React components provides a way to have more granular control over when a component should re-render as a result of an internal state update, or as dictated by the parent. Earlier this could be done by comparing `nextProps` with the current `props` using the now deprecated [ShallowCompare addon](https://facebook.github.io/react/docs/shallow-compare.html). React now has support for [PureComponent](https://facebook.github.io/react/docs/react-api.html#react.purecomponent) to achieve the same thing.
 
@@ -103,6 +103,8 @@ Console log with modified code:
 ```
 Rendering!
 ```
+
+Working example for this can be found [here](https://www.webpackbin.com/bins/-KgDvo4EG5QTmFinbUlL).
 
 `PureComponent` does a shallow check on `this.props` and `nextProps` automatically to determine if it should update. Note that if the passed prop changes deeply, `PureComponent` will not be able to catch it. In that case you should do a deep equality check (maybe use underscorejs for it):
 
