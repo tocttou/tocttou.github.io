@@ -25,7 +25,7 @@ Rendering!
 Rendering!
 ...
 ```
-
+<br />
 
 This could be solved by using a `PureComponent` to implement the second child:
 
@@ -36,7 +36,7 @@ Console log with modified code:
 ```
 Rendering!
 ```
-
+<br />
 
 Working example for this can be found [here](https://www.webpackbin.com/bins/-KgDvo4EG5QTmFinbUlL).
 
@@ -47,6 +47,6 @@ shouldComponentUpdate(nextProps, nextState) {
   return !_.isEqual(this.props, nextProps) || !_.isEqual(this.state, nextState);
 }
 ```
-
+<br />
 
 Or you could use ImmutableJS too.
