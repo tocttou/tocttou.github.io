@@ -15,7 +15,7 @@ The common parent to these children updates a state `text` every 1 second and pa
 
 <script src="https://gist.github.com/tocttou/447eed019c83a5be8793ac9d04117488.js"></script>
 
-This periodic state update in turn causes re-renders for both the child components. But it is clear that the second child should not be affected by the parent state update at all, since the prop passed remains the same. Console log by running this code:
+This periodic state update in turn causes re-renders for both the child components. **Ideally**, second child should not be affected by the parent state update at all, since the prop passed remains the same. Console log by running this code:
 
 ```
 Rendering!
