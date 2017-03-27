@@ -24,4 +24,4 @@ Here the `SocketProvider` is:
 
 <script src="https://gist.github.com/tocttou/66a7fc0e1a3a02bd3b18f5a702f820d9.js"></script>
 
-and is accessible in `MyComponent1` and `MyComponent2` as `this.props.socket`. Note that this `SocketProvider` only provides the websocket one level deep - children of `MyComponent1` do not get to use the websocket unless they are wrapped in `SocketProvider` themsevles. This is because `React.cloneElement(this.props.children, {...this.props, ...{ socket: this.socket }})` is a shallow copy.
+and is accessible in `MyComponent1` and `MyComponent2` as `this.props.socket`. Note that this `SocketProvider` only provides the websocket one level deep - children of `MyComponent1` do not get to use the websocket unless they are wrapped in `SocketProvider` themsevles. Also note that `{ ...this.props, { socket: this.socket }}` is a shallow merge.
