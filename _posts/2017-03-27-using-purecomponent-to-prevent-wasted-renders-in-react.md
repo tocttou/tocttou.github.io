@@ -42,11 +42,12 @@ Working example for this can be found [here](https://www.webpackbin.com/bins/-Kg
 
 `PureComponent` does a shallow check on `this.props` and `nextProps` automatically to determine if it should update. Note that if the passed prop changes deeply, `PureComponent` will not be able to catch it. In that case you should do a deep equality check (maybe use underscorejs for it):
 
+<div style="border-style: solid;border-width: 2px">
 ```
 shouldComponentUpdate(nextProps, nextState) {
   return !_.isEqual(this.props, nextProps) || !_.isEqual(this.state, nextState);
 }
 ```
-<br />
+</div>
 
 Or you could use ImmutableJS too.
