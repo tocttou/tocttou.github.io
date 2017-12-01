@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Suspend never worked with Linux on my Lenovo Z510. Recently I came across [this issue](https://github.com/Bumblebee-Project/bbswitch/issues/142) while looking for a fix (I use NVIDIA Prime, not Bumbleebee). Suspend now works on my laptop by doing:
 
