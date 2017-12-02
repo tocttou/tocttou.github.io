@@ -10,3 +10,4 @@ Replace `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"` with `GRUB_CMDLINE_LINUX_DEF
 `sudo update-grub`
 
 Reboot.
+
