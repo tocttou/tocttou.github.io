@@ -11,11 +11,5 @@ title: Contact
 ## Contact
 
    * [Email](mailto:me@ashishchaudhary.in)
+   * [Twitter](https://twitter.com/tocttou)
    * [keybase.io identity](https://keybase.io/ashishchaudhary)
-   * <span id = "toggle-hide">[Show some BTC love](#)</span>
-
-<div id = "btcaddress">
-	<img src = "{{ "images/site/chart.png" | prepend: site.baseurl }}" >
-	<img id = "bitcoin" src = "{{ "images/site/bitcoin-128-000000.png" | prepend: site.baseurl }}" >
-	3JBNaRDrMbZCaZyWsecks89TXAr4Brrm9U
-</div>

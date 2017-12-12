@@ -37,6 +37,6 @@ custom_header: false
 custom_nav_footer: false
 reverse: false
 
-gems:
+plugins:
   - jekyll-seo-tag
   - jekyll-paginate
