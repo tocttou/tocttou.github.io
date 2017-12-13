@@ -85,7 +85,7 @@ The type of `freqMapOne` is `FrequencyMap<Int, Int>` while the type of `mutableM
 Delegation can be used to implement multiple inheritance too! For example, if our `FrequencyMap` is a weird combination of a `MutableMap` and a `Map`, we can implement it as:
 
 {% highlight kotlin linenos %}
-package 
+package utils 
 
 class FrequencyMap<K, Int>(
     private val b: MutableMap<K, kotlin.Int>,
