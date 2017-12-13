@@ -1,22 +1,18 @@
-# Site settings
 title: Ashish Chaudhary
-description: "Ashish Chaudhary's blog"
+description: "tocttou's blog"
 url: "https://ashishchaudhary.in"
 author:
   name: "Ashish Chaudhary"
   email: "me@ashishchaudhary.in"
-  url: "https://ashishchaudhary.in"
+  url: "https://ashishchaudhary.in/hacker-blog"
 
-# Build settings
 baseurl: /
-markdown: kramdown
 source: .
 destination: ./_site
 permalink: /:title
 paginate: 3
 paginate_path: /page:num/
 
-# Default values
 defaults:
   -
     scope:
@@ -25,19 +21,14 @@ defaults:
     values:
       layout: "post"
 
-# Custom variables
-copyright : ""
-owner : "Ashish Chaudhary"
-year : "© 2017"
-
 future: true
-
-# Options
-custom_header: false
-custom_nav_footer: false
-reverse: false
-
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-sitemap
+
+google_analytics: "UA-67838485-1"
+
+# Custom variables
+owner : "Ashish Chaudhary"
+year : "2017"

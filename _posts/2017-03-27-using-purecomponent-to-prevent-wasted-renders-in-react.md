@@ -5,15 +5,70 @@ The [shouldComponentUpdate](https://facebook.github.io/react/docs/react-componen
 
 Lets say you have a child component that simply displays a `text` prop passed to it:
 
-<script src="https://gist.github.com/tocttou/65b78208a168a7f54aa2d888d70e3514.js"></script>
+```js
+import React, { Component } from 'react';
+
+export default class FirstChild extends Component {  
+  render() {
+    return (
+      <div>
+        {this.props.text}
+      </div>
+    );
+  }
+}
+```
 
 And you have another child component that displays another `text` prop passed to it and logs "Rendering" to the console for each render cycle pass:
 
-<script src="https://gist.github.com/tocttou/42954e96f3eceec28a0b207927baabdd.js"></script>
+```js
+import React, { Component } from 'react';
+
+export default class SecondChild extends Component {  
+  render() {
+    console.log("Rendering!");
+    return (
+      <div>
+        {this.props.text}
+      </div>
+    );
+  }
+}
+```
 
 The common parent to these children updates a state `text` every 1 second and passes it as a prop to the first child:
 
-<script src="https://gist.github.com/tocttou/447eed019c83a5be8793ac9d04117488.js"></script>
+```js
+import React, { Component } from 'react';
+import FirstChild from './FirstChild';
+import SecondChild from './SecondChild';
+
+export default class Parent extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      text: Math.random()
+    };
+  }
+  
+  componentDidMount() {
+    setInterval(() => this.setState({ text: Math.random() }), 1000);
+  }
+  
+  render() {
+    return (
+      <div>
+        <FirstChild
+          text={this.state.text}
+        />  
+        <SecondChild
+          text="some random data"
+        />
+      </div>
+    );
+  }
+}
+```
 
 This periodic state update in turn causes re-renders for both the child components. **Ideally**, second child should not be affected by the parent state update at all, since the prop passed remains the same. Console log by running this code:
 
@@ -27,7 +82,20 @@ Rendering!
 
 This could be solved by using a `PureComponent` to implement the second child:
 
-<script src="https://gist.github.com/tocttou/d283b67dc8d66704c3c737411e364557.js"></script>
+```js
+import React, { PureComponent } from 'react';
+
+export default class SecondChild extends PureComponent {  
+  render() {
+    console.log("Rendering!");
+    return (
+      <div>
+        {this.props.text}
+      </div>
+    );
+  }
+}
+```
 
 Console log with modified code:
 

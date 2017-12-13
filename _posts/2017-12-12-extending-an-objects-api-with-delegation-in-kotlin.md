@@ -20,10 +20,55 @@ an amount `freq` or remove it if the frequency goes below 1.
 We cannot use the first method directly because the `MutableMap<K, V>` interface does not have any default methods (forcing us to implement all the methods in it). The `mutableMapOf<K, V>` method returns a `java.util.LinkedHashMap<K, V>` type of object. This means that to use the first method, we need to derive from the `java.util.LinkedHashMap<K, V>` class.
 
 Let us use the second method to implement the `FrequencyMap`. We implement it as:
-<script src="https://gist.github.com/tocttou/a11a6397b153911d39cf4230d7ffabeb.js"></script>
+
+```kotlin
+package utils
+
+class FrequencyMap<K, Int>(private val b: MutableMap<K, kotlin.Int>)
+    : MutableMap<K, kotlin.Int> by b {
+      
+    fun add(key: K, freq: kotlin.Int = 1) {
+        b.computeIfPresent(key) { _, b -> b + freq }
+        b.putIfAbsent(key, freq)
+    }
+
+    fun add(vararg pairs: Pair<K, kotlin.Int>) {
+        for (pair in pairs) {
+            add(pair.first, pair.second)
+        }
+    }
+
+    fun removeFreq(key: K, freq: kotlin.Int = 1) {
+        if (b.get(key) == null || freq < 1) return
+        else if (b.get(key)!! - freq < 1) b.remove(key)
+        b.computeIfPresent(key) { _, b -> b - freq }
+    }
+}
+```
 
 Here our class implements the `MutableMap<K, V>` interface and takes another object `b` as an instantiation variable that has implemented that interface and use its methods to avoid having to implement methods of `MutableMap<K, V>` on our own. This delegation happens using the `by` keyword in Kotlin. We can then add extra methods to work on that object. We drive the above code in these two ways:
-<script src="https://gist.github.com/tocttou/5c3864c2f956c768fe8b190efb3d8e67.js"></script>
+
+```kotlin
+package main
+
+import utils.FrequencyMap
+
+fun main(args: Array<String>) {
+    val mutableMapOne = mutableMapOf<Int, Int>()
+    val freqMapOne = FrequencyMap<Int, Int>(mutableMapOne)
+    freqMapOne.add(1, 3)
+    freqMapOne.add(1, 2)
+    freqMapOne.add(Pair(2, 2))
+    freqMapOne.removeFreq(2, 2)
+    println("FrequencyMap generated from MutableMap")
+    for (i in freqMapOne) println(i)
+
+    val mutableMapTwo = mutableMapOf<Int, Int>()
+    FrequencyMap<Int, Int>(mutableMapTwo).add(3, 4)
+    println("Using methods of FrequencyMap directly on MutableMap")
+    for (i in mutableMapTwo) println(i)
+}
+```
 
 Which prints out:
 
@@ -37,7 +82,17 @@ Using methods of FrequencyMap directly on MutableMap
 The type of `freqMapOne` is `FrequencyMap<Int, Int>` while the type of `mutableMapTwo` remains `MutableMap<Int, Int>`. The second way is preferable because two `FrequencyMap<K, V>` objects cannot be compared using the `equals` method inherited from the `MutableMap<Int, Int>` object. If we use the first way, we have to implement an equals method on our own that compares by value, not by reference. In the second way, the type of object remains the same, allowing us to use its `equals`.
 
 Delegation can be used to implement multiple inheritance too! For example, if our `FrequencyMap` is a weird combination of a `MutableMap` and a `Map`, we can implement it as:
-<script src="https://gist.github.com/tocttou/cae45b5009c8089ec3d4d5abff1fb343.js"></script>
+
+```kotlin
+package 
+
+class FrequencyMap<K, Int>(
+    private val b: MutableMap<K, kotlin.Int>,
+    private val c: Map<K, kotlin.Int>)
+    : MutableMap<K, kotlin.Int> by b, Map<K, kotlin.Int> by c {
+    // Do something with b an c
+}
+```
 
 But now we need to implement all the conflicting methods (present in both `MutableMap` and `Map`) in `FrequencyMap` to avoid conflicts. Also note that only interfaces can be delegated to, so you cannot use this syntax to combine methods from `MutableMap` interface and the `String` class. In that case, it is better to use [extension functions](https://kotlinlang.org/docs/reference/extensions.html#extension-functions). 
 

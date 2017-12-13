@@ -1,32 +1,26 @@
-/*- Custom style -*/
-
-// -- Put custom style under this point -- //
-
-* {margin:0;padding:0;} 
-
-html, body {height: 100%;}
-
-#wrap {min-height: 100%;}
-
-#main {overflow:auto;
-  padding-bottom: 180px;}  /* must be same height as the footer */
-
-#footer {position: relative;
-  margin-top: -180px; /* negative value of footer height */
-  height: 180px;
-  clear:both;} 
-
-/*Opera Fix*/
-body:before {/* thanks to Maleika (Kohoutec)*/
-content:"";
-height:100%;
-float:left;
-width:0;
-margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+.feedback {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
-body:after
-{
+.feedback-box {
+  display: inline-flex;
+}
+
+.rating-box {}
+
+.write-box {
+  min-width: 40%;
+}
+
+.send-box {
+  align-self: center;
+}
+
+body:after {
     content: url("https://ashishchaudhary.in/images/site/awesome.svg") url("https://ashishchaudhary.in/images/site/bad.svg") url("https://ashishchaudhary.in/images/site/bitcoin-128-000000.png") url("https://ashishchaudhary.in/images/site/chart.png") url("https://ashishchaudhary.in/images/site/error.svg") url("https://ashishchaudhary.in/images/site/good.svg") url("https://ashishchaudhary.in/images/site/mediocre.svg") url("https://ashishchaudhary.in/images/site/send.svg");
     display: none;
 }
@@ -34,72 +28,55 @@ body:after
 ::-webkit-input-placeholder {
    text-align: center;
    font-weight: bold;
-   color: #d35400;
+   color: rgb(55, 71, 22);
    line-height: 2.5;
 }
 
 :-moz-placeholder { /* Firefox 18- */
    text-align: center; 
    font-weight: bold;
-   color: #d35400;
+   color: rgb(55, 71, 22);
    line-height: 2.5;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    text-align: center;
    font-weight: bold;
-   color: #d35400;
+   color: rgb(55, 71, 22);
    line-height: 2.5;
 }
 
 :-ms-input-placeholder {  
    text-align: center;
    font-weight: bold;
-   color: #d35400;
+   color: rgb(55, 71, 22);
    line-height: 2.5;
-}
-
-#bitcoin{
-	max-width: 3%;
-	display: inline-block;
-	vertical-align: middle;
-	margin: auto;
-}
-
-.br-wrapper{
-	display: inline-block;
-	margin: auto;
 }
 
 #message{
 	width: 100%;
-	border:2px dashed #d35400;
+	border:2px dashed #B5E853;
 	border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-	padding: 5px;
-      overflow: hidden;
-      resize:none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+	padding: 10px;
+  overflow: hidden;
+  resize:none;
 }
 
 #message:focus{
-	border:2px solid #d35400;
-      outline: 0;
+	border:2px solid #B5E853;
+  outline: 0;
 }
 
 #sendbutton{
 	display: inline-block;
 	margin: auto;
-	box-shadow: 5px 5px 3px #d35400;
+	box-shadow: 5px 5px 3px #B5E853;
 }
 
 #sendbutton:hover{
 	cursor: pointer;
-}
-
-#btcaddress{
-	visibility: hidden;
-	text-align: center;
 }
 
 #status{
@@ -118,7 +95,7 @@ body:after
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #d35400;
+  background-color: #B5E853;
   opacity: 0.6;
   position: absolute;
   top: 0;
@@ -146,15 +123,21 @@ body:after
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
   }
+}
+
+@media (max-width: 768px) {
+  .feedback {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .tag-cloud {
-  list-style: none;
-  padding: 0;
-  text-align: justify; 
-  font-size: 16px;
-  li {
-    display: inline-block;
-    margin: 0 12px 12px 0; 
+  .rating-box {
+    margin-bottom: 2.5vh;
+  }
+
+  .write-box {
+    min-width: 70%;
+    margin-bottom: 2.5vh;
   }
 }

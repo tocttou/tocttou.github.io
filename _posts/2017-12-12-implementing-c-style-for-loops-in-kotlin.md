@@ -9,10 +9,38 @@ Kotlin has two features that I love the most (among many many others):
 2. if the last parameter of a function is a lambda, that lambda can be put outside the function call.
 
 These two features (along with operator overloading, infix functions, and extension functions) make Kotlin great for writing DSL. We can make a simple polyfill for C-style for-loops like this:
-<script src="https://gist.github.com/tocttou/daf4eb604bc9923b502813cadbc98678.js"></script>
+
+```kotlin
+package utils
+
+fun oldFor(
+    initialSetter: () -> Int,
+    limitingCondition: (Int) -> Boolean,
+    updater: (Int) -> Int,
+    codeBlock: (Int) -> Unit) {
+    var i = initialSetter()
+    while (limitingCondition(i)) {
+        codeBlock(i)
+        i = updater(i)
+    }
+}
+```
 
 Which can be driven like this:
-<script src="https://gist.github.com/tocttou/69d0ecd1f1cd8181d11c3a3d3ea000c4.js"></script>
+
+```kotlin
+package main
+
+import utils.oldFor
+
+fun main(args: Array<String>) {
+    var n = 12
+    oldFor({ 0 }, { it < n }, { it + 1 }) {
+        println(it)
+        n /= 2
+    }
+}
+```
 
 Which prints out:
 
