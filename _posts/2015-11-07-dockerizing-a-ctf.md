@@ -53,7 +53,7 @@ With the major problems sorted out, lets look at the new architecture.
 
 The flowchart below explains how we build layers upon layers to reduce redundancy.
 
-<a href="/images/posts/architecture.svg" data-lightbox="hack_architecture" data-title="Hack architecture">![Hack architecture](/images/posts/architecture.svg)</a>
+![Hack Architecture](/images/posts/architecture.svg)
 
 First we build an image `hack-base` that is based on an Ubuntu 15.04 image itself. We use this image to install various packages that will be required by multiple challenges and thus reducing redundancy. We follow the same approach as we move up the chart. We make separate images for each type of primary environment (nodejs/python etc) and further build an image for each challenge + images for any external dependency they need (like redis/mongodb). Then we create what are called `containers` that are instances of the challenge images and link containers of external dependencies, if any. Its worth noting that the user cannot modify the image itself. The user is provided with a writable layer over the container. You may as well run `rm -rf /*` in an Ubuntu container and it will delete all your commands and system files but only from that instance. So you can just close the container and spin up one more in less than 2 seconds and whamm! you get the vanilla system back!
 
@@ -63,13 +63,47 @@ As for the networking to and fro from the container, we have to expose the ports
 
 To solve problem 4, we created a tool named Beast. Beast is written in python and performs all the tasks from syncing the challenges with the production server to building the challenge images and setting up the xinetd service. It can be used to deploy challenges locally or to multiple remote machines at once. After any action is performed, our Slack channel receives a notification from Beast about the deployment.
 
-<a href="/images/posts/beast.png" data-lightbox="beast_report" data-title="Beast report on Slack">![Beast report on Slack](/images/posts/beast.png)</a>
+![Beast Report On Slack](/images/posts/beast.png)
 
 Beast also monitors the resource usage of running containers using [google/cadvisor](https://github.com/google/cadvisor) and raises an alarm if something looks bad. It also exposes an API to check the challenge deployment status.
 
 One important feature of the new architecture is the standardization it brings. Now each challenge specifies a setup file that is used as a deployment guideline by Beast. Let's take a look at a sample challenge `pytest` that is a mixed type challenge. The setup file for pytest is shown below.
 
-<script src="https://gist.github.com/tocttou/58075d100b2658fc7070.js"></script>
+{% highlight json linenos %}
+{
+    "challenge_name": "pytest",
+    "public": [
+        {
+            "public_dir": "./public",
+            "public_setup": [
+                {
+                    "script": "public_bash.sh",
+                    "sudo": "yes"
+                }
+            ]
+        }
+    ],
+    "script": [
+        {
+            "script_dir": "./scripts",
+            "env": [
+                {
+                    "primary": "python",
+                    "version": "2",
+                    "executable": "yo.py"
+                }
+            ],
+            "port": [
+                {
+                    "xinetd": "yes",
+                    "outer-port": "8049"
+                }
+            ]
+        }
+    ],
+    "dev_file": "CHALLENGE.md"
+}
+{% endhighlight %}
 
 The keys used are self-explanatory. Note that the challenge creator can also specify bash scripts for elaborate deployment (like if some challenge requires `composer install`).
 

@@ -21,7 +21,7 @@ We cannot use the first method directly because the `MutableMap<K, V>` interface
 
 Let us use the second method to implement the `FrequencyMap`. We implement it as:
 
-```kotlin
+{% highlight kotlin linenos %}
 package utils
 
 class FrequencyMap<K, Int>(private val b: MutableMap<K, kotlin.Int>)
@@ -34,7 +34,8 @@ class FrequencyMap<K, Int>(private val b: MutableMap<K, kotlin.Int>)
 
     fun add(vararg pairs: Pair<K, kotlin.Int>) {
         for (pair in pairs) {
-            add(pair.first, pair.second)
+            val (key, freq) = pair
+            add(key, freq)
         }
     }
 
@@ -44,11 +45,11 @@ class FrequencyMap<K, Int>(private val b: MutableMap<K, kotlin.Int>)
         b.computeIfPresent(key) { _, b -> b - freq }
     }
 }
-```
+{% endhighlight %}
 
 Here our class implements the `MutableMap<K, V>` interface and takes another object `b` as an instantiation variable that has implemented that interface and use its methods to avoid having to implement methods of `MutableMap<K, V>` on our own. This delegation happens using the `by` keyword in Kotlin. We can then add extra methods to work on that object. We drive the above code in these two ways:
 
-```kotlin
+{% highlight kotlin linenos %}
 package main
 
 import utils.FrequencyMap
@@ -68,7 +69,7 @@ fun main(args: Array<String>) {
     println("Using methods of FrequencyMap directly on MutableMap")
     for (i in mutableMapTwo) println(i)
 }
-```
+{% endhighlight %}
 
 Which prints out:
 
@@ -83,7 +84,7 @@ The type of `freqMapOne` is `FrequencyMap<Int, Int>` while the type of `mutableM
 
 Delegation can be used to implement multiple inheritance too! For example, if our `FrequencyMap` is a weird combination of a `MutableMap` and a `Map`, we can implement it as:
 
-```kotlin
+{% highlight kotlin linenos %}
 package 
 
 class FrequencyMap<K, Int>(
@@ -92,7 +93,7 @@ class FrequencyMap<K, Int>(
     : MutableMap<K, kotlin.Int> by b, Map<K, kotlin.Int> by c {
     // Do something with b an c
 }
-```
+{% endhighlight %}
 
 But now we need to implement all the conflicting methods (present in both `MutableMap` and `Map`) in `FrequencyMap` to avoid conflicts. Also note that only interfaces can be delegated to, so you cannot use this syntax to combine methods from `MutableMap` interface and the `String` class. In that case, it is better to use [extension functions](https://kotlinlang.org/docs/reference/extensions.html#extension-functions). 
 

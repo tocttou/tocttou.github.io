@@ -7,7 +7,7 @@ GSoC 2016 results are out now and I have been selected to work with [CloudCV](ht
 
 There were some toy tasks given by CloudCV to filter the candidates. I chose toy task 2, which was to create a pipeline builder for OpenCV. At first I tried to implement the mockup given in task statement as it is and made this:
 
-<a href="https://i.imgur.com/Ll0TORp.png" data-lightbox="linked-cloudcv" data-title="Linked List implementation - CloudCV Toy Task 2">![Linked List implementation - CloudCV Toy Task 2](https://i.imgur.com/Ll0TORp.png)</a>
+![Linked List implementation - CloudCV Toy Task 2](https://i.imgur.com/Ll0TORp.png)
 
 But then upon discussion with mentor [Harsh Agrawal](https://github.com/dexter1691), I decided to implement it as a graph instead. Linked list was what others were doing anyway. This helped me make my proposal stand out from the rest. The end result was this:
 
@@ -31,7 +31,7 @@ ___
 
 One more thing that I must mention is that I applied to one other organization, Chapel as well. The task there was to build an online IDE for the Chapel language. I made a functional demo for it and implemented most of what was asked in the task within a week :p For the proposal I expanded the scope of the project a lot by focusing on their 'outreach' program. Then I modified that demo IDE to run many other languages, namely C, CPP, Java, Javascript (nodejs), Python2 and Python3. This new modified version won 2nd prize in Dynamic Applications category in Srishti 2016, our hobbies club's annual exhibition. Here is what that little IDE looked like:
 
-<a href="/images/posts/try_java.png" data-lightbox="try-java" data-title="My own Web IDE">![My own Web IDE](/images/posts/try_java.png)</a>
+![My Own Web IDE](/images/posts/try_java.png)
 
 I wanted to build something like this for a long time. This online IDE is complete with proper syntax highlighting & linting for the listed languages, getting a permalink to your code, stdin support, streaming stdout and stderr directly from your program to the pseudo-terminal on the right side over websockets and most imporantly it has configurable resource constraints to prevent any type of harmful code from doing damage to the application or hog resources. I intend to work on this little IDE of mine as a side project and will release it in the coming months as a full fledged project. I have taken down the live version for this as well. I have a roadmap ready for this. No code for now but expect something soon!
 

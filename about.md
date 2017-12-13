@@ -3,4 +3,6 @@ layout: page
 title: About
 ---
 
-## TODO
+* [Keybase](https://keybase.io/ashishchaudhary)
+* [Twitter](https://twitter.com/tocttou)
+* [Github](https://github.com/tocttou)

@@ -5,7 +5,7 @@ The [shouldComponentUpdate](https://facebook.github.io/react/docs/react-componen
 
 Lets say you have a child component that simply displays a `text` prop passed to it:
 
-```js
+{% highlight js linenos %}
 import React, { Component } from 'react';
 
 export default class FirstChild extends Component {  
@@ -17,11 +17,11 @@ export default class FirstChild extends Component {
     );
   }
 }
-```
+{% endhighlight %}
 
 And you have another child component that displays another `text` prop passed to it and logs "Rendering" to the console for each render cycle pass:
 
-```js
+{% highlight js linenos %}
 import React, { Component } from 'react';
 
 export default class SecondChild extends Component {  
@@ -34,11 +34,11 @@ export default class SecondChild extends Component {
     );
   }
 }
-```
+{% endhighlight %}
 
 The common parent to these children updates a state `text` every 1 second and passes it as a prop to the first child:
 
-```js
+{% highlight js linenos %}
 import React, { Component } from 'react';
 import FirstChild from './FirstChild';
 import SecondChild from './SecondChild';
@@ -68,7 +68,7 @@ export default class Parent extends Component {
     );
   }
 }
-```
+{% endhighlight %}
 
 This periodic state update in turn causes re-renders for both the child components. **Ideally**, second child should not be affected by the parent state update at all, since the prop passed remains the same. Console log by running this code:
 
@@ -78,11 +78,10 @@ Rendering!
 Rendering!
 ...
 ```
-<br />
 
 This could be solved by using a `PureComponent` to implement the second child:
 
-```js
+{% highlight js linenos %}
 import React, { PureComponent } from 'react';
 
 export default class SecondChild extends PureComponent {  
@@ -95,14 +94,13 @@ export default class SecondChild extends PureComponent {
     );
   }
 }
-```
+{% endhighlight %}
 
 Console log with modified code:
 
 ```
 Rendering!
 ```
-<br />
 
 Working example for this can be found [here](https://www.webpackbin.com/bins/-KgDvo4EG5QTmFinbUlL).
 
@@ -113,6 +111,5 @@ shouldComponentUpdate(nextProps, nextState) {
   return !_.isEqual(this.props, nextProps) || !_.isEqual(this.state, nextState);
 }
 ```
-<br />
 
 Or you could use ImmutableJS too.
