@@ -13,7 +13,7 @@ These two features (along with operator overloading, infix functions, and extens
 {% highlight kotlin linenos %}
 package utils
 
-fun oldFor(
+inline fun oldFor(
     initialSetter: () -> Int,
     limitingCondition: (Int) -> Boolean,
     updater: (Int) -> Int,
