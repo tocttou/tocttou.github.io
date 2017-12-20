@@ -91,7 +91,7 @@ class FrequencyMap<K, Int>(
     private val b: MutableMap<K, kotlin.Int>,
     private val c: Map<K, kotlin.Int>)
     : MutableMap<K, kotlin.Int> by b, Map<K, kotlin.Int> by c {
-    // Do something with b an c
+    // Do something with b and c
 }
 {% endhighlight %}
 
