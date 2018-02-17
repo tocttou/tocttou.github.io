@@ -2,7 +2,7 @@
 title: Better Error Handling In Kotlin With Either Type
 published: true
 ---
-One of the biggest pain points I face while working on any project in any language is to decide the points where errors and exceptions should be handled. Ideally one should handle all possible exceptions. There are two places where an exception can be handled - function definition-site and function call-site.
+One of the biggest pain points I face while working on any project in any language is to decide the points where errors and exceptions should be handled. Ideally one should handle all possible exceptions (the ones you can recover from). There are two places where an exception can be handled - function definition-site and function call-site.
 
 Handling the exception at definition-site sounds more logical because that helps us encapsulate the implementation of that function completely. There are two major problems with this approach:
 1. There is no way to tell the caller about the exception without throwing it again and handling it again at the call-site. This becomes necessary in cases where the event of an exception can alter the way in which the program proceeds instead of halting completely.
