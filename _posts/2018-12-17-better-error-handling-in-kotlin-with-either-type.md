@@ -2,6 +2,8 @@
 title: Better Error Handling In Kotlin With Either Type
 published: true
 ---
+Note: This is not an authoritative article on how to handle errors in Kotlin/Java, but it is accurate. This is something that I wanted to try out for a long time. I would suggest you to look at [Try](http://arrow-kt.io/docs/datatypes/try/) from Arrow lib after reading this blog post. I use the terms "error" and "exception" interchangeably - what is meant is "Exception" and not [Error](https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html). 
+
 One of the biggest pain points I face while working on any project in any language is to decide the points where errors and exceptions should be handled. Ideally one should handle all possible exceptions (the ones you can recover from). There are two places where an exception can be handled - function definition-site and function call-site.
 
 Handling the exception at definition-site sounds more logical because that helps us encapsulate the implementation of that function completely. There are two major problems with this approach:
