@@ -12,7 +12,7 @@ Handling the exception at definition-site sounds more logical because that helps
 
 Note that we want to avoid having to write multiple try/catch blocks for the same code. We also want to avoid consecutive and/or nested try/catch blocks because that reduces readability and quickly leads to pyramid of doom. And we most certainly do not want an all encompassing try/catch block at the top level.
 
-Another solution to this problem is to avoid try/catch entirely for exceptions that the application can recover from. If the exception is fatal, the application should rightfully crash. With this scheme, an exceptional condition should return a value that indicates an exception/error instead of throwing the exception. This can simply be done by returning a nullable value and handling the cases at the call-site.
+Another solution to this problem is to avoid try/catch entirely for exceptions that the application can recover from. If the exception is fatal, the application should rightfully crash. With this scheme, an exceptional condition should return a value that indicates an exception/error instead of throwing the exception. This can simply be done by returning a nullable value (if the logic permits) and handling the cases at the call-site.
 
 {% highlight kotlin linenos %}
 val value: String? = someExec()
