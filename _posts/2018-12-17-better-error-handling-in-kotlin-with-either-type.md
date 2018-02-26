@@ -68,7 +68,7 @@ This much implementation is roughly equivalent to the javascript example above, 
 Let us make a special execution block named `attempt<T>`. `attempt` always returns an `Either<T>` value. `attempt` optionally takes a variable number of `Either<V>` values as an argument and checks whether any of them is of `Either.Error` type. If yes, it throws the exception back; if no, it calls the last argument to it, a lambda, with the given parameters. Multiple `attempt` blocks can be nested and finally we only need to handle the exception once in the end (and we are required by the compiler to handle it). Doing this with try/catch blocks would have required using an all encompassing try/catch block at the top level. Here is the code for the `attempt` block:
 
 {% highlight kotlin linenos %}
-fun <T> attempt(vararg args: Either<Any>, body: (args: List<Any>) -> Either<T>): Either<T> {
+inline fun <T> attempt(vararg args: Either<Any>, body: (args: List<Any>) -> Either<T>): Either<T> {
     args.filterIsInstance<Either.Error>().forEach { throw it.e }
     return try {
         body(args.filterIsInstance<Either.Success<Any>>().map { it.value }) as Either.Success
