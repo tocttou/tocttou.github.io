@@ -5,6 +5,6 @@ Recently Github updated their UI for the worse. As a part of this update they re
 
 Download link for Chrome Web Store: [Link](https://chrome.google.com/webstore/detail/get-back-github-date/jbdeffedeonhkjinlichndgkkmfmpkec).
 
-Download Link for Mozilla Firefox: [Link](https://addons.mozilla.org/en-US/firefox/addon/get-back-github-profile-date/).
+Sideload for firefox.
 
 Source Code: [Link](https://github.com/tocttou/get-back-github-date).
