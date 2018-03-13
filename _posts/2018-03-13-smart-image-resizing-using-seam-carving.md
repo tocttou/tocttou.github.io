@@ -7,6 +7,7 @@ published: true
 
 **Demo**
 
+*Caution: It is really really slow (1min+). I will optimize it to work in real-time when I get time to work on it again.*
 [http://seam.ashishchaudhary.in:8080/](http://seam.ashishchaudhary.in:8080/)
 
 The code is available at: [tocttou/smartresizing](https://github.com/tocttou/smartresizing)
