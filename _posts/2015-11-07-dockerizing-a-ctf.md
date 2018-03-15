@@ -23,7 +23,7 @@ The public-type challenges were served by an Apache server running at http://hac
 
 For public-type challenges, the same structure has been retained. Earlier, all challenges had the same `virtualHost` but now each challenge has its own. This was done to better implement challenges that required custom rules or a custom domain name.
 
-Script-type challenges ,however, had some major problems:
+Script-type challenges, however, had some major problems:
 
 1. The aim is to run all script-type challenges in chroot jails but adding new environments to the jail is a huge pain.
 2. There is a big problem of redundancy. Because each challenge runs in a separate jail, each of them had their own copy of the necessary environment. This can be solved by creating a common jail for all challenges but that puts other challenges at risk in case one of them gets compromised.
