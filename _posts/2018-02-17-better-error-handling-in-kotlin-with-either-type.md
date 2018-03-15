@@ -21,7 +21,7 @@ if (value != null) {
 }
 {% endhighlight %}
 
-Or instead of a nullable value, an `Error` value can be returned that provides more information to the call-site about how to handle the situation. This method is very popular in the javascript world where functions often return objects instead of primitives that indicates the status of an execution. Example:
+Or instead of a nullable value, an `Error` value can be returned that provides more information to the call-site about how to handle the situation. This method is very popular in the javascript world where functions often return objects instead of primitives that indicate the status of an execution. Example:
 
 {% highlight js linenos %}
 function pass() {
