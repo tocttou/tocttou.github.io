@@ -33,44 +33,46 @@ Size of dataset was reduced based on the fact that the most important characters
 
 Someone who does not know about the show can enjoy it too :D
 
-### 1
+**Right click on image and "View Image" or "Open Image In New Tab" to see the zoomed version.**
 
-![house-marry](https://i.imgur.com/O8lCM3J.png)
+### 1
 
 People in the same house do not seem to marry among themsevles, unless they are Targaryen (green).
 
-### 2
+![house-marry](https://i.imgur.com/O8lCM3J.png)
 
-![jonsnow](https://i.imgur.com/liyFpsJ.png)
+### 2
 
 Jon Snow is the link between the Starks and the Lannisters (brown and green here).
 
-### 3
+![jonsnow](https://i.imgur.com/liyFpsJ.png)
 
-![female-fatale](https://i.imgur.com/sdWbFYE.png)
+### 3
 
 Fatal females: Women (pink) have a considerably higher degree of "killings" on average than men (blue) in this dataset. Cersei Lannister alone took down quite a few. The three most deadly people in Westeros are Cersei Lannister, Daenerys Targaryen, and Arya Stark (names can be seen on zoom).
 
+![female-fatale](https://i.imgur.com/sdWbFYE.png)
+
 ### 4
+
+The chain of love that started it all. This the longest such chain in the marriage graph. Possibly indicates unrest among elements.
 
 ![chain](https://i.imgur.com/GdBumxm.png)
 
-The chain of love that started it all. This the longest such chain in the marriage graph. Possible indicates unrest among elements.
-
 ### 5 - Circular relationship
-
-![kill-p](https://i.imgur.com/UjUBkNC.png)
 
 These people killed their parents.
 
-### 6 - Circular relationship
+![kill-p](https://i.imgur.com/UjUBkNC.png)
 
-![kill-w](https://i.imgur.com/K0lUSdj.png)
+### 6 - Circular relationship
 
 These people killed their spouse/love interest.
 
+![kill-w](https://i.imgur.com/K0lUSdj.png)
+
 ### 7 - Circular relationship
 
-![marry-s](https://i.imgur.com/DvKtpjW.png)
-
 Of course the Targaryen's married their siblings.
+
+![marry-s](https://i.imgur.com/DvKtpjW.png)
