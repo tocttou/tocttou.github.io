@@ -9,6 +9,8 @@ Given a dataset ([game-of-thrones/characters.json at master · jeffreylancaster/
 
 ## Source code
 
+React-Typescript-Visjs-Sagas-antd
+
 [tocttou / got-visual](https://github.com/tocttou/got-visual)
 
 ## Demo
@@ -19,8 +21,6 @@ No live demo available at the moment. Neo4j refuses to run properly on a 512MB R
 
 A free floating graph based representation with directed edges to define relationships, and colours to define grouping.
 
-Size of dataset was reduced based on the fact that the most important characters are the most chaotic, and thus have the most number of fields available on them, or they are royal. Please see `external/import-data/clean.js` for the exact rules. This also means that some important characters might not be there in the database.
-
 1. Group by sex (used another json file in the same repository to get information about this).
 2. Group by House name.
 3. Stack multiple relationships like `parentOf`, `killedBy` on top of each other concurrently.
@@ -28,6 +28,14 @@ Size of dataset was reduced based on the fact that the most important characters
 5. Ability to cluster outlier nodes (ones connected by only a single edge to other nodes).
 6. Number of active characters on the screen, number of active relationships.
 7. **Ability to find cicular relationships.**
+
+After a quick look at the dataset, it was clear to me that a graph db would be perfect for this use case. I did know about what graph databases are and how they work, but did not have prior practical experince. I started working with the `Go.js` graphing library which I had previously used in 2-3 projects, and with `neo4j` as the database.
+
+I started looking at some other libs too (`Alchemy.js` in particular, which turned out to be a nightmare because it has not been updated to use modules.) After wasting 4-5 hours with Alchemy, I switched to `Vis.js` graphing lib which worked flawlessly.
+
+To connect to neo4j I made a small proxy with expressjs that relays commands via a nodejs-only neo4j library.
+
+Size of dataset was reduced based on the fact that the most important characters are the most chaotic, and thus have the most number of fields available on them, or they are royal. Please see `external/import-data/clean.js` for the exact rules. This also means that some important characters might not be there in the database.
 
 ## Interesting finds
 
