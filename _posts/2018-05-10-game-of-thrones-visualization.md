@@ -81,6 +81,6 @@ These people killed their spouse/love interest.
 
 ### 7 - Circular relationship
 
-Of course the Targaryen's married their siblings.
+Of course the Targaryens married their siblings.
 
 ![marry-s](https://i.imgur.com/DvKtpjW.png)
