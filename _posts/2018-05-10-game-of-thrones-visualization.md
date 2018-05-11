@@ -27,7 +27,7 @@ A free floating graph based representation with directed edges to define relatio
 4. Abilitiy to filter out data based on multiple selectors like `male`, `royal`, and `houseName`.
 5. Ability to cluster outlier nodes (ones connected by only a single edge to other nodes).
 6. Number of active characters on the screen, number of active relationships.
-7. **Ability to find cicular relationships.**
+7. **Ability to find circular relationships.**
 
 After a quick look at the dataset, it was clear to me that a graph db would be perfect for this use case. I did know about what graph databases are and how they work, but did not have prior practical experince. I started working with the `Go.js` graphing library which I had previously used in 2-3 projects, and with `neo4j` as the database.
 
