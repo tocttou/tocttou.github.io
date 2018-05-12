@@ -51,7 +51,7 @@ People in the same house do not seem to marry among themsevles, unless they are 
 
 ### 2
 
-Jon Snow is the link between the Starks and the Lannisters (brown and green here).
+Jon Snow is the link between the Starks and the Targaryens (brown and green here).
 
 ![jonsnow](https://i.imgur.com/liyFpsJ.png)
 
