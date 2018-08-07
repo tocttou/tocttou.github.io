@@ -24,7 +24,7 @@ Note that this requires making sure that the function supplied only has 1 argume
 This is not possible currently:
 
 {% highlight typescript linenos %}
-function test(args: string[], callback: () => void) {}
+function test(args: ...string[], callback: () => void) {}
 {% endhighlight %}
 
 ---
