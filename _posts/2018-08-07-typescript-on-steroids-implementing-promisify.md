@@ -1,5 +1,5 @@
 ---
-title: Typescript on steroids: Implementing Promisify
+title: Typescript on steroids&#58; Implementing Promisify
 published: false
 ---
 ## A New Post
