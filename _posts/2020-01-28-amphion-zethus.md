@@ -6,6 +6,7 @@ published: true
 The browser is perhaps the most versatile and approachable platform that has ever existed. Marrying it to robotics makes sense. For the last few months at work, I have been working in this direction with two open-source projects [Zethus]([https://github.com/rapyuta-robotics/zethus/) and [Amphion](https://github.com/rapyuta-robotics/amphion/).
 
 **Amphion** - A library that ingests [ROS messages]([http://wiki.ros.org/msg](http://wiki.ros.org/msg)) and outputs `THREE.js` objects to visualise them. It can either subscribe to data sources and update in real-time, or updates can be dispatched manually.
+
 **Zethus** - A library (can work as a standalone webapp as well!) that uses `Amphion` underneath to provide ready-to-go react components. In the standalone mode, it is a directly replacement of industry standard [Rviz]([http://wiki.ros.org/rviz](http://wiki.ros.org/rviz)) (but in the browser). It also enables the user to tweak parameters for `Amphion` in real-time.
 
 The diagram below explains the flow of information in this scheme:
@@ -19,6 +20,7 @@ The following sections detail some of the most interesting aspects of my work in
 ### Amphion.Image
 
 Ingests: [sensor_msgs/Image](http://docs.ros.org/melodic/api/sensor_msgs/html/msg/Image.html)
+
 Outputs: HTML div container for the image constructed from the message. It supports multiple image encodings.
 
 ![Amphion.Image](https://i.imgur.com/8qQrmjL.png)
@@ -28,6 +30,7 @@ Outputs: HTML div container for the image constructed from the message. It suppo
 ### Amphion.RobotModel
 
 Ingests: robot description ros param, package list
+
 Outputs: a robot model that follows TF messages (messages defining the relationship between different frame of references)
 
 ![Amphion.Robotmodel](https://i.imgur.com/EVS7w7j.png)
@@ -46,6 +49,7 @@ Combining `Amphion.RobotModel`, `Amphion.InteractiveMarkers` (with appropriate b
 ### Amphion.Map
 
 Ingests: [nav_msgs/OccupancyGrid](http://docs.ros.org/melodic/api/nav_msgs/html/msg/OccupancyGrid.html)
+
 Outputs: The occupancy grid visualised as a `THREE.js` object.
 
 ![Amphion.Map](https://i.imgur.com/P5rYxGn.png)
@@ -53,6 +57,7 @@ Outputs: The occupancy grid visualised as a `THREE.js` object.
 ### Amphion.Pointcloud
 
 Ingests: [sensor_msgs/PointCloud2](http://docs.ros.org/melodic/api/sensor_msgs/html/msg/PointCloud2.html)
+
 Outputs: `THREE.js` object that visualises the point cloud in real-time. Since the amount of data processed is often huge, `Amphion` uses webassembly to process the messages as fast as possible. 
 
 Given below is a streaming pointcloud at ~30k points (published at `10Hz` frequency) with `x`, `y`, `z`, and `intensity` channels - (55 FPS on a measly Thinkpad L470).
