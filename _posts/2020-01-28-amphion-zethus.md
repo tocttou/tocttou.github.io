@@ -38,6 +38,7 @@ Outputs: a robot model that follows TF messages (messages defining the relations
 ### Amphion.InteractiveMarkers
 
 Ingests: [visualization_msgs/InteractiveMarker](http://docs.ros.org/melodic/api/visualization_msgs/html/msg/InteractiveMarker.html)
+
 Outputs: Makes the scene interactive by adding 6-DOF controls to certain objects in the scene. This is a near complete client implementation for ros interactive marker server (enabled by [tocttou/three-freeform-controls](https://ashishchaudhary.in/three-freeform-controls/)).
 
 ![Amphion.InteractiveMarkers](https://i.imgur.com/vhN10f7.png)
