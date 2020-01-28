@@ -3,7 +3,7 @@ title: Webassembly to the rescue
 published: true
 ---
 
-While working on pointclouds for [Amphion](https://github.com/rapyuta-robotics/amphion), I came across an interesting problem.
+While working on pointclouds for [Amphion and Zethus](https://ashishchaudhary.in/amphion-zethus), I came across an interesting problem.
 
 Consider the following scenario:
 1. a stream of messages containing an evolving pointcloud
