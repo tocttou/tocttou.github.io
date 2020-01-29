@@ -56,7 +56,7 @@ Choke point `3`: The field buffers are again copied back to the JS memory and th
 
 But this double copying negates the speed benefit wasm gives us :(
 
-#### Can we fill the buffer attribute without copying back the field buffers from the wasm memory?
+### Can we fill the buffer attribute without copying back the field buffers from the wasm memory?
 
 YES! All we need is the pointers of the field buffers in the wasm memory.
 
