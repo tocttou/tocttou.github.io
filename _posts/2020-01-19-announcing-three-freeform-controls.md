@@ -29,6 +29,8 @@ The following features are currently implemented:
  10. enabling partial controls only
  11. multiple instances of controls anchored to a single object
  12. different instances of controls anchored to a different objects
+ 13. snap to grid
+ 14. translation limits along individual axes
 
 The following two tasks are next on the radar:
 
