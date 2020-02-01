@@ -32,9 +32,7 @@ Script-type challenges, however, had some major problems:
 
 ### Tackling the problems:
 
-Initially, I started working on problem 4 but figuring that out was turning out to be insanely difficult because of no standardization in the challenges. It was obvious then that a restructure was necessary. Looking for alternatives, I found Jails in FreeBSD. While these jails did solve problem 1 somewhat, with their ease of setup and adding new environments, problem 2 still persisted*. I came across Docker while learning about jails and after spending some time in containers, Docker became the obvious choice.
-
-*Edit: Further investigation into FreeBSD jails reveals that there is an option to share directories between multiple jails using nullfs mounts. Furthermore, you can mount the system directories read only for protection in case one of the jails is compromised. Using this option seems to be viable but at the cost of flexibility that docker has provided. Jails in FreeBSD are essentially the same thing as containers elsewhere. One reason against FreeBSD is that I am much more comfortable in using Gnu/Linux instead, only because it is my primary operating system (but I'll revisit FreeBSD soon). And the person who will manage it after me would also have to learn the ways of FreeBSD. No doubt it is a very good option, but probably not the best option for our use case.
+Initially, I started working on problem 4 but figuring that out was turning out to be difficult because of no standardization in the challenges. It was obvious then that a structure was necessary. I came across Docker while searching a solution and after some time, it became the obvious choice.
 
 ### How Docker solves these problems:
 
