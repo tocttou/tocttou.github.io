@@ -2,45 +2,8 @@
 title: Better Error Handling In Kotlin With Either Type
 published: true
 ---
-Note: This is not an authoritative article on how to handle errors in Kotlin/Java, but it is accurate. This is something that I wanted to try out for a long time. I would suggest you to look at [Try](http://arrow-kt.io/docs/datatypes/try/) from Arrow lib after reading this blog post. I use the terms "error" and "exception" interchangeably - what is meant is "Exception" and not [Error](https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html). 
 
-One of the biggest pain points I face while working on any project in any language is to decide the points where errors and exceptions should be handled. Ideally one should handle all possible exceptions (the ones you can recover from). There are two places where an exception can be handled - function definition-site and function call-site.
-
-Handling the exception at definition-site sounds more logical because that helps us encapsulate the implementation of that function completely. There are two major problems with this approach:
-1. There is no way to tell the caller about the exception without throwing it again and handling it again at the call-site. This becomes necessary in cases where the event of an exception can alter the way in which the program proceeds instead of halting completely.
-2. Definition-site may not be the best place to put rollback/recovery mechanisms.
-
-Note that we want to avoid having to write multiple try/catch blocks for the same code. We also want to avoid consecutive and/or nested try/catch blocks because that reduces readability and quickly leads to pyramid of doom. And we most certainly do not want an all encompassing try/catch block at the top level.
-
-Another solution to this problem is to avoid try/catch entirely for exceptions that the application can recover from. If the exception is fatal, the application should rightfully crash. With this scheme, an exceptional condition should return a value that indicates an exception/error instead of throwing the exception. This can simply be done by returning a nullable value (if the logic permits) and handling the cases at the call-site.
-
-{% highlight kotlin linenos %}
-val value: String? = someExec()
-if (value != null) {
-    // do something
-}
-{% endhighlight %}
-
-Or instead of a nullable value, an `Error` value can be returned that provides more information to the call-site about how to handle the situation. This method is very popular in the javascript world where functions often return objects instead of primitives that indicate the status of an execution. Example:
-
-{% highlight js linenos %}
-function pass() {
-  return { type: "success", value: "1" };
-}
-function fail() {
-  return { type: "failure", message: "it failed!" };
-}
-{% endhighlight %}
-
-In javascript, it is entirely the responsibility of the developer to adhere to this interface at all relevant points. This presents two problems:
-1. There is no standardization of return types (javascript does not have a type system).
-2. There is no guarantee that an exceptional condition will be dealt with at least once in a call stack.
-
-Fortunately, we can handle both of these problems (respectively) in Kotlin with the use of:
-1. `sealed class`.
-2. `when` as an expression (Kotlin does not have pattern matching, but this is a close approximation).
-
-Sealed classes in Kotlin let us mimick [discriminated unions](https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions)(algebraic data types). We want to implement something like an `Either` type as in various [functional programming languages](https://hackage.haskell.org/package/base-4.10.1.0/docs/Data-Either.html). This Either type can either have a value Left (Error/Failure) or a value Right (Success) (on a side-note: sealed classes are pretty useless if you want to mimick [union types](https://discuss.kotlinlang.org/t/union-types/77/36) but do not have ownership of all the types involved. Unfortunately, this means that it is not possible to use primitives like `Int` or `Long` directly with sealed classes without boxing them in a data class.) Here is how we can define the Either type:
+Here is a nice experiment (borrowed from FP languages). Define the Either type:
 
 {% highlight kotlin linenos %}
 sealed class Either<out T> {
@@ -62,8 +25,6 @@ fun doSomething(): String? {
 {% endhighlight %}
 
 In the above example, the `echo` function either returns an `Either.Success<String>` or an `Either.Error<Nothing>`. Depending upon the type of result, we can return an appropriate value from `doSomething`. We can also put any recovery mechanism here. The use `when` as an expression makes the compiler force us to consider all the possible values of `result`.
-
-This much implementation is roughly equivalent to the javascript example above, but has the additional benefit of being type safe. The above example would outright suck for cases where there are multiple such _fail-able_ statements one after another, and even more so if those statements depend on each other. We can do better.
 
 Let us make a special execution block named `attempt<T>`. `attempt` always returns an `Either<T>` value. `attempt` optionally takes a variable number of `Either<V>` values as an argument and checks whether any of them is of `Either.Error` type. If yes, it throws the exception back; if no, it calls the last argument to it, a lambda, with the given parameters. Multiple `attempt` blocks can be nested and finally we only need to handle the exception once in the end (and we are required by the compiler to handle it). Doing this with try/catch blocks would have required using an all encompassing try/catch block at the top level. Here is the code for the `attempt` block:
 
@@ -128,5 +89,3 @@ If we change the line 13 to `val helloAshish = attempt { echo("ashish2") }`, we 
 ```
 name: ashish2 is not allowed here
 ```
-
-I have not yet used this pattern in actual code yet, but most certainly will do.
