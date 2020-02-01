@@ -10,7 +10,8 @@ published: true
 *This was a web-service.* [dead!] http://seam.ashishchaudhary.in:8080/
 
 The code is available at: [tocttou/smartresizing](https://github.com/tocttou/smartresizing)
-Overview of the application: [https://i.imgur.com/DJv24cT.png](https://i.imgur.com/DJv24cT.png)
+
+Overview of the application (kotlin): [https://i.imgur.com/DJv24cT.png](https://i.imgur.com/DJv24cT.png)
 
 The algorithm implementation is available directly at: [SeamCarver.kt](https://github.com/tocttou/smartresizing/blob/master/src/main/kotlin/in/ashishchaudhary/smartresizing/task/SeamCarver.kt)
 
