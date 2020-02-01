@@ -1,6 +1,9 @@
 ---
 published: true
 ---
+
+**Note** - This content in this post is not up to date. Check out the [official docs](https://reactjs.org/docs/context.html) for the Context API.
+
 Often times there is a requirement to share a common websocket connection between React components. I have been using the [React Context API](https://facebook.github.io/react/docs/context.html) to do that. Example for socket.io:
 
 In this case there is a top level component file `App.js` where the socket is initialized and then made available to other React Components like `HomePageComponent.js` (which are its children) using Context.
