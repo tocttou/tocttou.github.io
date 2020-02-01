@@ -34,7 +34,7 @@ The following features are currently implemented:
 
 The following two tasks are next on the radar:
 
-1. snap to grid in Translation controls
+1. A-frame component
 2. tests
 
 Excited to take the project forawrd!
