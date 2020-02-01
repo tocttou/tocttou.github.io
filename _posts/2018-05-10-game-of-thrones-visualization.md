@@ -27,7 +27,7 @@ Jon Snow is the link between the Starks and the Targaryens (brown and green here
 
 ### 3
 
-Fatal females: Women (pink) have a considerably higher degree of "killings" on average than men (blue) in this dataset. Cersei Lannister alone took down quite a few. The three most deadly people in Westeros are Cersei Lannister, Daenerys Targaryen, and Arya Stark (names can be seen on zoom).
+Women (pink) have a considerably higher degree of "killings" on average than men (blue) in this dataset. Cersei Lannister alone took down quite a few. The three most deadly people in Westeros are Cersei Lannister, Daenerys Targaryen, and Arya Stark (names can be seen on zoom).
 
 ![female-fatale](https://i.imgur.com/sdWbFYE.png)
 
