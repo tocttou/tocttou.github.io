@@ -111,5 +111,3 @@ shouldComponentUpdate(nextProps, nextState) {
   return !_.isEqual(this.props, nextProps) || !_.isEqual(this.state, nextState);
 }
 ```
-
-Or you could use ImmutableJS too.
