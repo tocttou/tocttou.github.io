@@ -3,7 +3,7 @@ title: Smart Image Resizing Using Seam Carving
 published: true
 ---
 
-[Seam carving](https://people.csail.mit.edu/mrub/talks/SeamCarving_6.865.pdf) is a fascinating technique to scale up/down an image (or a video frame).
+[Seam carving](https://people.csail.mit.edu/mrub/talks/SeamCarving_6.865.pdf) is a fascinating technique to scale up/down an image.
 
 **Demo**
 
