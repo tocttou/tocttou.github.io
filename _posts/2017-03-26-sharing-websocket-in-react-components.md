@@ -2,7 +2,7 @@
 published: true
 ---
 
-**Note** - This content in this post is not up to date. Check out the [official docs](https://reactjs.org/docs/context.html) for the Context API.
+**Note** - This content in this post is a bit outdated. Check out the [official docs](https://reactjs.org/docs/context.html) for the Context API.
 
 Often times there is a requirement to share a common websocket connection between React components. I have been using the [React Context API](https://facebook.github.io/react/docs/context.html) to do that. Example for socket.io:
 
