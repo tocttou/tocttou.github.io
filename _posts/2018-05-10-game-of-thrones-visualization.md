@@ -5,7 +5,7 @@ published: true
 
 Dataset: [game-of-thrones/characters.json at master · jeffreylancaster/game-of-thrones · GitHub](https://github.com/jeffreylancaster/game-of-thrones/blob/master/data/characters.json).
 
-[tocttou / got-visual](https://github.com/tocttou/got-visual)
+Source code: [tocttou / got-visual](https://github.com/tocttou/got-visual)
 
 ## Interesting finds
 
