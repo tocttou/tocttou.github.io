@@ -107,9 +107,7 @@ The keys used are self-explanatory. Note that the challenge creator can also spe
 
 Here is a sample of how the tool works:
 
-<script type="text/javascript" src="https://asciinema.org/a/73rumyybyhrbk5m54qkc7tv2w.js" id="asciicast-73rumyybyhrbk5m54qkc7tv2w" async></script>
-
-If the above link is not visible, try [this instead](https://imgur.com/4jYSvcU).
+![demo](https://i.imgur.com/4jYSvcU.gif)
 
 ### What's next?
 
