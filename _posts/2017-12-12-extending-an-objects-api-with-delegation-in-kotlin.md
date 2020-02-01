@@ -96,5 +96,3 @@ class FrequencyMap<K, Int>(
 {% endhighlight %}
 
 But now we need to implement all the conflicting methods (present in both `MutableMap` and `Map`) in `FrequencyMap` to avoid conflicts. Also note that only interfaces can be delegated to, so you cannot use this syntax to combine methods from `MutableMap` interface and the `String` class. In that case, it is better to use [extension functions](https://kotlinlang.org/docs/reference/extensions.html#extension-functions). 
-
-**Delegation is nothing but a form of composition.**
