@@ -1,5 +1,5 @@
 ---
-title: Game Of Thrones Visualizations With Neo4j
+title: Game Of Thrones Visualizations With Neo4j graph DB
 published: true
 ---
 
