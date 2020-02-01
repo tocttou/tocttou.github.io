@@ -7,20 +7,12 @@ published: true
 
 **Demo**
 
-*Caution: It is slow. I will optimize it to work in real-time when I get time to work on it again.*
-[dead!] http://seam.ashishchaudhary.in:8080/
+*This was a web-service.* [dead!] http://seam.ashishchaudhary.in:8080/
 
 The code is available at: [tocttou/smartresizing](https://github.com/tocttou/smartresizing)
+Overview of the application: [https://i.imgur.com/DJv24cT.png](https://i.imgur.com/DJv24cT.png)
 
 The algorithm implementation is available directly at: [SeamCarver.kt](https://github.com/tocttou/smartresizing/blob/master/src/main/kotlin/in/ashishchaudhary/smartresizing/task/SeamCarver.kt)
-
-*Restrictions*
-
-- Max image size:  1MB
-- Max image resolution: 600x600
-- Max dimension change at a time: -+30%
-
-The code is written to be thread safe and can run multiple workers in parallel using rabbitmq. However, I can only afford to allot this service a single core CPU with 512MB RAM, with a single worker running. So if it feels stuck on the loading screen, please be patient and allow it a minute to process. Cancelling and trying out another image does not cancel the previous task, and the new task will get queued.
 
 **Results**
 
@@ -56,23 +48,3 @@ Results are fascinating (mostly).
 1. Take a temporary copy of the original image and perform reduction on it `dimension -desiredDimension` times. Keep a track of all the consecutive seams thus obtained.
 2. Since the reduction of these seams was supposed to cause the least change in the appearance of the image, addition of a seam nearby in the original image will have the same effect.
 3. For each such obtained seam, add a seam adjacent to the location of that seam in the original picture. The color of an added pixel in that seam is calculated by averaging the colors of the adjacent pixels.
-
-**Application architecture**
-
-The code is written in Kotlin and is self-explanatory. It has the following components:
-
-1. A webserver with websockets to propagate results using [Ktor](http://ktor.io/).
-2. A task dispatcher.
-3. A message broker (rabbitmq).
-4. A forward queue for tasks, a backwards queue for results.
-5. A task runner (consumer).
-
-Task runner is independent of all other parts, can be launched separately, and can have multiple instances running at once. Message broker passes the tasks to these instances in round-robin fashion.
-
-A caching layer returns the pre-computed results if available.
-
-![architecture](https://i.imgur.com/DJv24cT.png)
-
-**Further improvements**
-
-Big improvments can be made by pre-computing the edge-weighted-digraph and just mutating the seams adjacent to the lowest energy seams as required. I will work on this whenever I get time. Caching the energy values helps a bit too, but not much.
