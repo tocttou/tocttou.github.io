@@ -3,11 +3,11 @@ title: Robotics in the browser! - Zethus + Amphion
 published: true
 ---
 
-The browser is perhaps the most versatile and approachable platform that has ever existed. Marrying it to robotics makes sense. For the last few months at work, I have been working in this direction with two open-source projects [Zethus]([https://github.com/rapyuta-robotics/zethus/) and [Amphion](https://github.com/rapyuta-robotics/amphion/).
+The browser is perhaps the most versatile and approachable platform that has ever existed. Marrying it to robotics makes sense. For the last few months at work, I have been working in this direction with two open-source projects [Zethus](https://github.com/rapyuta-robotics/zethus/) and [Amphion](https://github.com/rapyuta-robotics/amphion/).
 
-**Amphion** - A library that ingests [ROS messages]([http://wiki.ros.org/msg](http://wiki.ros.org/msg)) and outputs `THREE.js` objects to visualise them. It can either subscribe to data sources and update in real-time, or updates can be dispatched manually.
+**Amphion** - A library that ingests [ROS messages](http://wiki.ros.org/msg) and outputs `THREE.js` objects to visualise them. It can either subscribe to data sources and update in real-time, or updates can be dispatched manually.
 
-**Zethus** - A library (can work as a standalone webapp as well!) that uses `Amphion` underneath to provide ready-to-go react components. In the standalone mode, it is a directly replacement of industry standard [Rviz]([http://wiki.ros.org/rviz](http://wiki.ros.org/rviz)) (but in the browser). It also enables the user to tweak parameters for `Amphion` in real-time.
+**Zethus** - A library (can work as a standalone webapp as well!) that uses `Amphion` underneath to provide ready-to-go react components. In the standalone mode, it is a directly replacement of industry standard [Rviz](http://wiki.ros.org/rviz)) (but in the browser). It also enables the user to tweak parameters for `Amphion` in real-time.
 
 The diagram below explains the flow of information in this scheme:
 
@@ -114,4 +114,4 @@ Given below is the `Amphion.Image` visualisation along with an info panel listen
 
 ![zethus info panel](https://i.imgur.com/7W4XgVe.png)
 
-I won't list all the features in this post. Go check out the [project]([https://github.com/rapyuta-robotics/zethus](https://github.com/rapyuta-robotics/zethus))!
+I won't list all the features in this post. Go check out the [project](https://github.com/rapyuta-robotics/zethus)!
