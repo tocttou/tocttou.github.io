@@ -7,7 +7,7 @@ Sometimes when adding types to an existing codebase it becomes difficult to use 
 
 Consider the following component:
 
-```jsx
+```tsx
 const FilterComponent = ({ filterType }) => {
   if (filterType === "CHECKBOX") {
     return <div>Filtered by CHECKBOX</div>;
@@ -23,7 +23,7 @@ export default FilterComponent;
 
 The component is used like this in the existing codebase:
 
-```js
+```tsx
 <FilterComponent filterType="CHECKBOX" />
 ```
 
@@ -138,7 +138,7 @@ export default FilterComponent;
 
 For the usage:
 
-```js
+```tsx
 // this usage does not give a type error but is incorrect in code
 <FilterComponent filterType="CHECKBOX" />
 
@@ -161,7 +161,7 @@ export const FilterOptions = {
   RADIO: "radio"
 } as const;
 
-type TFilterType = ValueOf<FilterOptions>;
+type TFilterType = ValueOf<typeof FilterOptions>;
 
 const FilterComponent = ({ filterType }: { filterType: TFilterType }) => {
   if (filterType === FilterOptions.CHECKBOX) {
