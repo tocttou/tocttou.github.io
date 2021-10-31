@@ -83,6 +83,18 @@ export const FilterOptions = {
 type TFilterType = keyof typeof FilterOptions;
 
 // TFilterType is: CHECKBOX | RADIO
+
+const FilterComponent = ({ filterType }: { filterType: TFilterType }) => {
+  if (filterType === FilterOptions.CHECKBOX) {
+    return <div>Filtered by FilterOptions</div>;
+  } else if (filterType === FilterType.RADIO) {
+    return <div>Filtered by RADIO</div>;
+  }
+
+  return <div>Not filtered</div>;
+};
+
+export default FilterComponent;
 ```
 
 Which can then be used as:
@@ -111,14 +123,27 @@ type TFilterType = keyof typeof FilterOptions;
 
 // TFilterType is: CHECKBOX | RADIO
 
-//
+const FilterComponent = ({ filterType }: { filterType: TFilterType }) => {
+  if (filterType === FilterOptions.CHECKBOX) {
+    return <div>Filtered by FilterOptions</div>;
+  } else if (filterType === FilterType.RADIO) {
+    return <div>Filtered by RADIO</div>;
+  }
 
-// this usage works
+  return <div>Not filtered</div>;
+};
 
+export default FilterComponent;
+```
+
+For the usage:
+
+```js
+// this usage does not give a type error but is incorrect in code
 <FilterComponent filterType="CHECKBOX" />
 
-// but this does not
-
+// this usage gives a type error but is correct in code
+// Type '"checkbox"' is not assignable to type '"CHECKBOX" | "RADIO"'
 <FilterComponent filterType={FilterOptions.CHECKBOX} />
 ```
 
@@ -137,6 +162,18 @@ export const FilterOptions = {
 } as const;
 
 type TFilterType = ValueOf<FilterOptions>;
+
+const FilterComponent = ({ filterType }: { filterType: TFilterType }) => {
+  if (filterType === FilterOptions.CHECKBOX) {
+    return <div>Filtered by FilterOptions</div>;
+  } else if (filterType === FilterType.RADIO) {
+    return <div>Filtered by RADIO</div>;
+  }
+
+  return <div>Not filtered</div>;
+};
+
+export default FilterComponent;
 ```
 
 Which can be used as:
