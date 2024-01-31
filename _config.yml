@@ -27,7 +27,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-google_analytics: "UA-67838485-1"
+google_analytics: "G-RNCYSN7F64"
 
 # Custom variables
 owner : "Ashish Chaudhary"
